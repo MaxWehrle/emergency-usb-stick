@@ -4,7 +4,7 @@
 
 `ZIP herunterladen → entpacken → Ordnerinhalt auf Stick kopieren → eigene Dateien ergänzen → offline testen`
 
-1. Laden Sie das [deutsche ZIP](https://github.com/AkazaTheThird/emergency-usb-stick/archive/refs/heads/country/DE.zip) herunter und entpacken Sie es. Prüfen Sie, ob `START.html` sichtbar ist.
+1. Laden Sie das deutsche ZIP über die Projekt-Startseite herunter und entpacken Sie es. Prüfen Sie, ob `START.html` sichtbar ist. Wenn Sie dieses Verzeichnis bereits sehen, ist das Paket schon entpackt.
 2. Kopieren Sie **alle Dateien und Ordner innerhalb** des entpackten Verzeichnisses auf einen leeren USB-Stick. `START.html` soll direkt auf dem Stick liegen.
 3. Öffnen Sie `START.html` unter Windows durch Doppelklick. Auf Android: USB-C-Stick oder passenden Adapter anschließen, im Dateimanager den Stick öffnen und `START.html` mit einem Browser öffnen. Die konkrete Bedienung hängt vom Gerät und der Android-Version ab.
 4. Ergänzen Sie Ihre Dateien in `personal/Fotos/`, `personal/Karten/`, `personal/Dokumente/`. Nutzen Sie für sensible Daten die Anleitung in `private/README.txt`. Optional baut `python tools/build.py` die Linkliste auf der Startseite neu auf; Python ist dafür erforderlich, nicht für den Stick selbst.
