@@ -8,7 +8,7 @@ import shutil
 import subprocess
 
 root = Path(__file__).resolve().parents[1]
-zip_path = root / 'dist/DE-2026.11.09-r2.zip'
+zip_path = root / 'dist/DE-2026.11.09-r3.zip'
 assert zip_path.is_file(), 'Run python tools/package.py first'
 
 class Links(HTMLParser):
@@ -20,6 +20,8 @@ class Links(HTMLParser):
         a = dict(attrs)
         if 'href' in a:
             self.links.append(a['href'])
+        if 'src' in a:
+            self.links.append(a['src'])
         if tag in ('script', 'link', 'img') and a.get('src', a.get('href', '')).startswith(('http:', 'https:')):
             self.remote_assets.append(tag)
 

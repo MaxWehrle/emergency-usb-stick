@@ -1,43 +1,86 @@
-# In fünf Schritten zum Notfall-Stick
+# Der Notfall-Stick: Schritt für Schritt
 
-**Deutschland · de-DE · Recherche 09.11.2026**
+**Deutschland · einfache Anleitung · Stand 09.11.2026**
 
-`ZIP herunterladen → entpacken → Ordnerinhalt auf Stick kopieren → eigene Dateien ergänzen → offline testen`
+Sie brauchen einen USB-Stick und einen Windows-PC **oder** ein Android-Handy. Ein USB-Stick ist ein kleiner Speicher, den man an ein Gerät steckt. Die Form des Steckers muss zur Buchse am Gerät passen:
 
-1. Laden Sie das deutsche ZIP über die Projekt-Startseite herunter und entpacken Sie es. Prüfen Sie, ob `START.html` sichtbar ist. Wenn Sie dieses Verzeichnis bereits sehen, ist das Paket schon entpackt.
-2. Kopieren Sie **alle Dateien und Ordner innerhalb** des entpackten Verzeichnisses auf einen leeren USB-Stick. `START.html` soll direkt auf dem Stick liegen.
-3. Öffnen Sie `START.html` unter Windows durch Doppelklick. Auf Android: USB-C-Stick oder passenden Adapter anschließen, im Dateimanager den Stick öffnen und `START.html` mit einem Browser öffnen. Die konkrete Bedienung hängt vom Gerät und der Android-Version ab.
-4. Ergänzen Sie Ihre Dateien in `personal/Fotos/`, `personal/Karten/`, `personal/Dokumente/`. Nutzen Sie für sensible Daten die Anleitung in `private/README.txt`. Optional baut `python tools/build.py` die Linkliste auf der Startseite neu auf; Python ist dafür erforderlich, nicht für den Stick selbst.
-5. Trennen Sie das Gerät vom Netz oder aktivieren Sie Flugmodus. Öffnen Sie `START.html`, suchen Sie eine Lagekarte, öffnen Sie eine Textdatei in `guides/` und kopieren Sie eine eigene Datei vom Stick zurück. Werfen Sie den Stick danach sicher aus.
+![USB-A ist breit und eckig, USB-C ist klein und oval.](assets/stecker.svg)
 
-## Größe wählen
+**USB-A** ist an vielen PCs. **USB-C** ist an vielen neueren Android-Handys. Manche Sticks haben beide Stecker. Wenn die Form nicht passt, kann ein passender Adapter helfen. Kaufen Sie erst, wenn Sie die Buchse an Ihren eigenen Geräten angesehen haben.
 
-Rechnen Sie den **tatsächlichen** Umfang Ihrer Dateien zusammen und addieren Sie mindestens 30 % Reserve für neue Dateien, Dateisystem und Aktualisierungen. Beispiel: 18 GB Medien + 2 GB Dokumente = 20 GB; mit 30 % Reserve 26 GB. Ein 32-GB-Stick ist nominell groß genug, ein 64-GB-Stick bietet mehr Spielraum. Die am Gerät angezeigte nutzbare Kapazität kann kleiner sein.
+## 1. Das Paket herunterladen
 
-| Bibliothek | Beispielrechnung | Sinnvolle nominelle Größe |
+Öffnen Sie die [Projekt-Startseite](https://github.com/MaxWehrle/emergency-usb-stick) und klicken oder tippen Sie auf **„Deutsches Paket als ZIP herunterladen“**. Warten Sie, bis der Download fertig ist. Die Datei heißt ungefähr `DE-2026.11.09-r3.zip` (die Zahl am Ende kann bei einer neuen Ausgabe anders sein).
+
+**ZIP** bedeutet: Viele Dateien stecken in einer gepackten Datei. Sie müssen die ZIP-Datei zuerst **entpacken**. Das heißt, die Dateien daraus in einen normalen Ordner holen. Kopieren Sie nicht nur die ZIP-Datei auf den Stick.
+
+## 2A. Mit einem Windows-PC entpacken und kopieren
+
+1. Öffnen Sie den **Datei-Explorer**. Das Symbol sieht wie ein gelber Ordner aus.
+2. Öffnen Sie links **Downloads**. Suchen Sie die Datei, die mit `DE-` beginnt und mit `.zip` endet.
+3. Klicken Sie mit der **rechten Maustaste** auf die ZIP-Datei. Wählen Sie **Alle extrahieren** oder **Alles extrahieren**. Klicken Sie dann auf **Extrahieren**. Windows öffnet einen neuen, normalen Ordner.
+4. Öffnen Sie diesen Ordner. Sie sollten `START.html` und Ordner wie `guides` und `personal` sehen. Falls Sie zuerst noch einen einzigen Ordner sehen, öffnen Sie auch ihn.
+5. Stecken Sie den USB-Stick in den PC. Öffnen Sie im Datei-Explorer links **Dieser PC** und dann den USB-Stick. Er kann auch einen anderen Namen haben, zum Beispiel „USB-Laufwerk“.
+6. Wechseln Sie zurück zum entpackten Ordner. Drücken Sie **Strg + A**, um alles darin zu markieren. Drücken Sie **Strg + C**, um es zu kopieren.
+7. Wechseln Sie zum geöffneten USB-Stick. Drücken Sie **Strg + V**, um alles einzufügen. Warten Sie, bis das Kopieren fertig ist. **Auf dem Stick muss `START.html` direkt sichtbar sein.**
+
+Wenn auf dem Stick schon eigene Dateien sind oder Windows fragt, ob Dateien ersetzt werden sollen: Stoppen Sie und prüfen Sie zuerst, was dort liegt. **Formatieren** löscht den Inhalt des Sticks; für diese Anleitung ist das nicht nötig.
+
+## 2B. Nur mit einem Android-Handy
+
+1. Öffnen Sie die App **Dateien**, **Eigene Dateien** oder **Dateimanager**. Suchen Sie unter **Downloads** die heruntergeladene ZIP-Datei.
+2. Tippen Sie auf die ZIP-Datei und wählen Sie **Extrahieren**, **Entpacken** oder **In Ordner entpacken**. Die Wörter können je nach Handy anders heißen. Danach sollten `START.html` und die Ordner sichtbar sein.
+3. Stecken Sie einen passenden USB-C-Stick oder Adapter an. Öffnen Sie in der Dateien-App den **USB-Speicher**. Er kann auch „Externes Laufwerk“ heißen.
+4. Wählen Sie **alle Dateien und Ordner innerhalb** des entpackten Ordners aus. Tippen Sie auf **Kopieren** und wählen Sie den USB-Speicher als Ziel. Warten Sie bis zum Ende.
+5. Öffnen Sie den USB-Speicher erneut. `START.html` muss dort direkt liegen. Tippen Sie darauf und wählen Sie einen Browser, falls das Handy fragt.
+
+Einige Handys oder Datei-Apps können USB-Speicher oder lokale HTML-Dateien nicht öffnen. Das wurde **nicht auf Ihrem Gerät getestet**. Wenn `START.html` nicht öffnet, öffnen Sie im USB-Speicher den Ordner `guides` und lesen Sie die Textdateien. Testen Sie bei Gelegenheit einen anderen Browser oder benutzen Sie einen Windows-PC zum Kopieren.
+
+## 3. Eigene Dateien ergänzen
+
+Öffnen Sie den Ordner `personal` auf dem Stick:
+
+- In `Fotos` kommen **Ihre** Fotos.
+- In `Karten` kommen Offline-Karten, die Sie rechtmäßig gespeichert haben.
+- In `Dokumente` kommen eigene **nicht geheime** Dokumente.
+
+Kopieren Sie nur Dateien, die Sie selbst verwenden dürfen. Für Ausweise, Gesundheitsdaten, Passwörter und andere sehr persönliche Unterlagen lesen Sie zuerst `private/README.txt`. Dort steht, wie Sie einen verschlüsselten Tresor einrichten und **auf Ihren eigenen Geräten testen**. In diesem Paket liegt noch kein Tresor und kein Passwort.
+
+Wenn Sie später Dateien ergänzen, finden Sie sie immer direkt in diesen Ordnern. Optional kann jemand mit Python `python tools/build.py` ausführen, damit neue Dateinamen auch auf `START.html` verlinkt werden. Für die normale Benutzung brauchen Sie Python nicht.
+
+## 4. Den Stick ausprobieren
+
+1. Schalten Sie WLAN und mobile Daten für den Test aus oder wählen Sie den Flugmodus.
+2. Öffnen Sie `START.html` vom Stick. Sehen Sie die Notfall-Themen? Suchen Sie nach **Wasser**. Verschwindet der Text wieder, wenn Sie das Suchwort löschen?
+3. Öffnen Sie `guides/wasser-hygiene.md` als normale Datei. Wenn Ihr Gerät `.md` nicht anbietet, wählen Sie eine Text-App oder einen Editor.
+4. Öffnen Sie eine eigene Testdatei. Kopieren Sie diese Datei **vom Stick zurück auf Ihr Gerät** und öffnen Sie die Kopie. So prüfen Sie, ob Sie Dateien wiederherstellen können.
+5. Werfen Sie den Stick über die Funktion **Auswerfen** oder **Sicher entfernen** aus, bevor Sie ihn abziehen.
+
+Machen Sie eine **zweite vollständige Kopie** auf einen zweiten Stick. Bewahren Sie die beiden Sticks an verschiedenen Orten auf. Prüfen Sie beide nach Änderungen und dann regelmäßig, zum Beispiel alle drei Monate. Wenn etwas nicht lesbar ist, ersetzen Sie den fehlerhaften Stick.
+
+## 5. Wie groß soll der Stick sein?
+
+Schauen Sie auf Ihrem Gerät nach, wie viel Speicher Ihre eigenen Dateien belegen. Rechnen Sie etwa **ein Drittel zusätzlich** als Platz für spätere Dateien. Beispiel: 20 GB eigene Dateien + ungefähr 6 GB Platz = mindestens 26 GB nötig. Die angezeigte nutzbare Kapazität kann kleiner sein als die Zahl auf der Verpackung.
+
+| Ihre Dateien | Beispiel | Stick-Größe als Orientierung |
 |---|---:|---:|
-| Klein: Dokumente und wenige Fotos | 5 GB × 1,3 = 6,5 GB | 16–32 GB |
-| Mittel: viele Fotos und Karten | 35 GB × 1,3 = 45,5 GB | 64 GB |
-| Groß: umfangreiche Medien | 140 GB × 1,3 = 182 GB | 256 GB |
+| Wenige Fotos, Dokumente | 5 GB + Reserve = 7 GB | 16 bis 32 GB |
+| Viele Fotos, einige Karten | 35 GB + Reserve = 46 GB | 64 GB |
+| Sehr viele Fotos oder Videos | 140 GB + Reserve = 182 GB | 256 GB |
 
-## Kaufen und prüfen
+## 6. Kaufbeispiele für Deutschland
 
-- Wählen Sie die Kapazität nach Ihrer Rechnung. Für Windows-Rechner und Android-Geräte mit USB-C ist ein Stick mit **USB-A und USB-C** bequem; sonst einen passenden USB-C-Adapter einplanen. Ein Anschluss allein garantiert keine Lesbarkeit: Gerät, Dateisystem und Dateimanager müssen den Stick unterstützen.
-- Kaufen Sie bei nachvollziehbaren Händlern, vergleichen Sie **Gesamtpreis inklusive Versand** und achten Sie auf Rückgabe- und Gewährleistungsbedingungen. Kein Stick ist ausfallsicher; zwei Kopien und Lesetests bleiben nötig.
-- Beispiele im deutschen Markt, recherchiert am **09.11.2026**, ohne Affiliate-Links: [Sandisk Ultra Dual Drive Go 128 GB bei MediaMarkt](https://www.mediamarkt.de/de/product/_sandisk-ultra%C2%AE-dual-drive-go-2609988.html) (Shopseite zeigte 24,99 €) und [Sandisk Ultra Dual Drive Go 256 GB bei MediaMarkt](https://www.mediamarkt.de/de/product/_sandisk-ultrar-dual-drive-go-usb-type-ctm-usb-stick-256-gb-400-mbs-dunkelgrau-2982110.html) (Shopseite zeigte 39,99 €). Shoppreise und Verfügbarkeit können sich jederzeit ändern; die angezeigten Seiten können zwischengespeichert sein. Prüfen Sie den aktuellen Warenkorb vor Kauf. [Herstellerangaben zu Anschlüssen und Systemen](https://www.sandisk.com/products/usb-flash-drives/sandisk-ultra-dual-drive-go-usb-3-1-type-c?sku=SDDDC3-128G-G46) sind keine Prüfung Ihres konkreten Geräts.
-- Formatieren Sie einen neuen Stick nur, wenn Sie sicher sind, dass keine benötigten Daten darauf liegen. Prüfen Sie Dateisystem und maximale Dateigrößen mit Ihren eigenen Windows- und Android-Geräten. Ein Geräteversuch wurde für dieses Projekt nicht durchgeführt.
+Prüfen Sie **Anschluss, Platz, Gesamtpreis mit Versand und Rückgabemöglichkeit**. Kein Stick ist ausfallsicher. Ein USB-C-Stecker allein garantiert nicht, dass Ihr Handy den Stick lesen kann. Testen Sie ihn nach dem Kauf.
 
-## Zwei Kopien und Wiederherstellung
+Am **09.11.2026** zeigten deutsche Shopseiten diese Beispiele, ohne Affiliate-Links: [Sandisk Ultra Dual Drive Go 128 GB bei MediaMarkt](https://www.mediamarkt.de/de/product/_sandisk-ultra%C2%AE-dual-drive-go-2609988.html) (24,99 € angezeigt) und [Sandisk Ultra Dual Drive Go 256 GB bei MediaMarkt](https://www.mediamarkt.de/de/product/_sandisk-ultrar-dual-drive-go-usb-type-ctm-usb-stick-256-gb-400-mbs-dunkelgrau-2982110.html) (39,99 € angezeigt). Beide Varianten haben laut [Hersteller](https://www.sandisk.com/products/usb-flash-drives/sandisk-ultra-dual-drive-go-usb-3-1-type-c?sku=SDDDC3-128G-G46) USB-A und USB-C. **Preise und Lieferbarkeit ändern sich.** Prüfen Sie den Warenkorb vor dem Kauf. Die Kompatibilität mit Ihrem konkreten Gerät wurde nicht getestet.
 
-Erstellen Sie eine zweite vollständige Kopie und bewahren Sie sie an einem anderen Ort auf. Prüfen Sie nach jeder wichtigen Änderung beide Sticks: `START.html` öffnen, Stichwort suchen, ausgewählte Fotos und Dokumente lesen und mindestens eine Datei **auf ein anderes Gerät zurückkopieren**. Wiederholen Sie diesen Test regelmäßig, beispielsweise alle drei Monate. Tauschen Sie defekte oder nicht lesbare Medien aus. Bewahren Sie Tresorpasswort und Wiederherstellungsschlüssel **getrennt** vom Stick auf.
+## Kurze Merkliste
 
-## Eigene Checkliste
+- [ ] `START.html` öffnet sich ohne Internet.
+- [ ] Eine Lagekarte und eine Textdatei sind lesbar.
+- [ ] Eigene Kontakte, Dokumente, Fotos und Karten sind ergänzt.
+- [ ] Geheime Dateien sind nur im getesteten verschlüsselten Tresor.
+- [ ] Eine Datei wurde erfolgreich zurückkopiert.
+- [ ] Es gibt eine zweite Kopie an einem anderen Ort.
 
-- [ ] Kontaktliste und Treffpunkt ausgedruckt
-- [ ] Wichtige Urkunden, Ausweise, Versicherungs- und Gesundheitsnachweise als persönliche Kopie
-- [ ] Benötigte Medikamente, Ladegeräte und Powerbank berücksichtigt
-- [ ] Eigene Fotos und Offline-Karten mit Nutzungsrecht ergänzt
-- [ ] Verschlüsselten Bereich auf Windows **und** Android mit einer Testdatei geprüft
-- [ ] Zweite Kopie und Rückkopier-Test durchgeführt
-
-Digitale Kopien ersetzen Originaldokumente nicht. Erkundigen Sie sich bei der zuständigen Stelle, ob ein Original oder eine beglaubigte Kopie benötigt wird.
+**Digitale Kopien ersetzen Originaldokumente nicht.** Fragen Sie bei der ausstellenden Stelle, ob ein Original oder eine beglaubigte Kopie nötig ist. Aktuelle behördliche Warnungen und örtliche Anweisungen haben immer Vorrang.

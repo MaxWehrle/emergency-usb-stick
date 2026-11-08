@@ -1,13 +1,21 @@
-# Notfall-USB-Stick · Deutschland / de-DE
+# Notfall-Stick für Deutschland
 
-Dies ist der **Inhalt des deutschen USB-Pakets**. Öffnen Sie [START.html](START.html) im Browser oder die normalen Textdateien in [guides/](guides/). Internet und Installation sind für die Inhalte nicht erforderlich.
+**Sie haben das Paket schon geöffnet.** Diese Dateien können Sie auf einen USB-Stick kopieren. Der Stick ist ein kleiner tragbarer Speicher. Er funktioniert auch ohne Internet.
 
-## Stick fertigstellen
+## Jetzt lesen
 
-1. Kopieren Sie alle Dateien und Ordner aus diesem Verzeichnis auf einen USB-Stick. `START.html` soll direkt auf dem Stick liegen.
-2. Ergänzen Sie eigene Dateien unter `personal/`. Lesen Sie [private/README.txt](private/README.txt), bevor Sie sensible Unterlagen speichern.
-3. Öffnen Sie `START.html` im Flugmodus, suchen Sie ein Thema und kopieren Sie probeweise eine Datei zurück. Erstellen Sie eine zweite Kopie an einem getrennten Ort.
+1. Öffnen Sie [START.html](START.html). Das ist die Startseite mit den Notfall-Themen.
+2. Wenn Sie einen **PC mit Windows** haben: Klicken Sie zweimal schnell auf `START.html`. Das nennt man Doppelklick.
+3. Wenn Sie ein **Android-Handy** haben: Öffnen Sie die App **Dateien** oder **Dateimanager**. Tippen Sie auf den USB-Stick und dann auf `START.html`. Wählen Sie einen Browser, falls das Handy danach fragt.
 
-[Ausführlicher Starterguide](STARTERGUIDE.md) · [Quellenverzeichnis](SOURCES.md) · [MIT-Lizenz für eigene Texte und Software](LICENSE)
+Wenn die Startseite nicht aufgeht: Öffnen Sie den Ordner [guides](guides/) und lesen Sie die passende Textdatei. Die Informationen sind auch dort gespeichert.
 
-Digitale Kopien ersetzen keine Originaldokumente. Aktuelle behördliche Warnungen und örtliche Anweisungen haben Vorrang. Die Karten sind eigene Kurztexte nach den dokumentierten Primärquellen. Verlinkte Fremdinhalte sind nicht mitgeliefert.
+## Ihren Stick vorbereiten
+
+Lesen Sie die [Anleitung mit ganz kleinen Schritten](STARTERGUIDE.md). Dort steht genau, wie Sie das ZIP entpacken, Dateien kopieren und den Stick testen. **ZIP** ist eine gepackte Datei. **Entpacken** heißt: Die Dateien daraus in einen normalen Ordner holen.
+
+Eigene Fotos, Karten und Dokumente gehören in den Ordner `personal`. Für geheime oder sehr persönliche Unterlagen lesen Sie zuerst [private/README.txt](private/README.txt). Legen Sie Passwörter nie auf den Stick.
+
+[Quellen und Prüfdatum](SOURCES.md) · [Lizenz](LICENSE)
+
+**Wichtig:** Bei akuter Gefahr die örtlichen Anweisungen beachten. Digitale Kopien ersetzen keine Originaldokumente.

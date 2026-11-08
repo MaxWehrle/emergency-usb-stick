@@ -5,7 +5,7 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 root = Path(__file__).resolve().parents[1]
 allowed = ['START.html', 'STARTERGUIDE.md', 'SOURCES.md', 'LICENSE', 'README.md',
-           'CONTRIBUTING.md', 'assets/app.js', 'assets/style.css', 'tools/build.py',
+           'CONTRIBUTING.md', 'assets/app.js', 'assets/style.css', 'assets/stecker.svg', 'tools/build.py',
            'tools/verify.py', 'tools/package.py', 'MANIFEST.sha256',
            'private/README.txt']
 allowed += [p.relative_to(root).as_posix() for folder in ('content', 'guides')
@@ -23,7 +23,7 @@ def canonical_bytes(rel):
 manifest = '\n'.join(f'{sha256(canonical_bytes(rel)).hexdigest()}  {rel}'
                      for rel in allowed if rel != 'MANIFEST.sha256') + '\n'
 (root / 'MANIFEST.sha256').write_bytes(manifest.encode('utf-8'))
-out = root / 'dist' / 'DE-2026.11.09-r2.zip'
+out = root / 'dist' / 'DE-2026.11.09-r3.zip'
 out.parent.mkdir(exist_ok=True)
 with ZipFile(out, 'w', ZIP_DEFLATED) as z:
     for rel in allowed:
