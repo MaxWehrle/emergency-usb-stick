@@ -1,7 +1,7 @@
 """Make a clean German ZIP; never include user's files from personal/ or private/."""
 from pathlib import Path
 from hashlib import sha256
-from zipfile import ZipFile, ZIP_DEFLATED
+from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 root = Path(__file__).resolve().parents[1]
 allowed = ['START.html', 'STARTERGUIDE.md', 'SOURCES.md', 'LICENSE', 'README.md',
@@ -27,5 +27,8 @@ out = root / 'dist' / 'DE-2026.11.09-r2.zip'
 out.parent.mkdir(exist_ok=True)
 with ZipFile(out, 'w', ZIP_DEFLATED) as z:
     for rel in allowed:
-        z.writestr(rel, canonical_bytes(rel))
+        info = ZipInfo(rel, date_time=(2026, 11, 9, 0, 0, 0))
+        info.compress_type = ZIP_DEFLATED
+        info.external_attr = 0o644 << 16
+        z.writestr(info, canonical_bytes(rel))
 print(f'{out} SHA-256 {sha256(out.read_bytes()).hexdigest()}')
