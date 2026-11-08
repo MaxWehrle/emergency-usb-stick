@@ -53,7 +53,13 @@ if (root / 'content').exists():
         for line in manifest.read_text(encoding='utf-8').splitlines():
             digest, rel = line.split('  ', 1)
             p = root / rel
-            if not p.is_file() or sha256(p.read_bytes()).hexdigest() != digest:
+            if not p.is_file():
+                failures.append(f'Checksum mismatch: {rel}')
+                continue
+            data = p.read_bytes()
+            if p.suffix.lower() in {'.html', '.md', '.txt', '.json', '.py', '.js', '.css', '.yml'} or p.name in {'LICENSE', '.gitignore'}:
+                data = data.replace(b'\r\n', b'\n')
+            if sha256(data).hexdigest() != digest:
                 failures.append(f'Checksum mismatch: {rel}')
 if failures:
     print('\n'.join(failures), file=sys.stderr)
