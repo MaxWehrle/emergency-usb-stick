@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+dist/
+personal/**
+!personal/**/README.txt
+private/**
+!private/README.txt
+*.cryptomator/
+*.key
+*.kdbx
+*.pem
+*.p12
+*.pfx
