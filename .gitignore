@@ -3,9 +3,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 dist/
-personal/**
+personal/*/*
 !personal/**/README.txt
-private/**
+private/*
 !private/README.txt
 *.cryptomator/
 *.key
