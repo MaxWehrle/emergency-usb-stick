@@ -15,12 +15,17 @@ allowed = sorted(set(allowed))
 missing = [rel for rel in allowed if rel != 'MANIFEST.sha256' and not (root / rel).is_file()]
 if missing:
     raise SystemExit(f'Missing files: {missing}')
-manifest = '\n'.join(f'{sha256((root / rel).read_bytes()).hexdigest()}  {rel}'
+def canonical_bytes(rel):
+    # All allowlisted files are text. LF makes hashes and ZIP bytes independent
+    # of Windows checkout settings; user media is never packaged here.
+    return (root / rel).read_bytes().replace(b'\r\n', b'\n')
+
+manifest = '\n'.join(f'{sha256(canonical_bytes(rel)).hexdigest()}  {rel}'
                      for rel in allowed if rel != 'MANIFEST.sha256') + '\n'
-(root / 'MANIFEST.sha256').write_text(manifest, encoding='utf-8')
-out = root / 'dist' / 'DE-2026.11.09-r1.zip'
+(root / 'MANIFEST.sha256').write_bytes(manifest.encode('utf-8'))
+out = root / 'dist' / 'DE-2026.11.09-r2.zip'
 out.parent.mkdir(exist_ok=True)
 with ZipFile(out, 'w', ZIP_DEFLATED) as z:
     for rel in allowed:
-        z.write(root / rel, rel)
+        z.writestr(rel, canonical_bytes(rel))
 print(f'{out} SHA-256 {sha256(out.read_bytes()).hexdigest()}')
