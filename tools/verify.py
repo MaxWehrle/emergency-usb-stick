@@ -57,7 +57,7 @@ if (root / 'content').exists():
                 failures.append(f'Checksum mismatch: {rel}')
                 continue
             data = p.read_bytes()
-            if p.suffix.lower() in {'.html', '.md', '.txt', '.json', '.py', '.js', '.css', '.yml'} or p.name in {'LICENSE', '.gitignore'}:
+            if p.suffix.lower() in {'.html', '.md', '.txt', '.json', '.py', '.js', '.css', '.yml', '.svg'} or p.name in {'LICENSE', '.gitignore'}:
                 data = data.replace(b'\r\n', b'\n')
             if sha256(data).hexdigest() != digest:
                 failures.append(f'Checksum mismatch: {rel}')
