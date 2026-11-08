@@ -4,13 +4,13 @@ Ein einfacher Offline-Ordner mit Lagekarten, Quellen und Platz für eigene Datei
 
 ## Deutschland: in fünf Schritten
 
-1. [Deutsches Paket als ZIP herunterladen](releases/DE-2026.11.09-r1.zip) und entpacken.
+1. [Deutsches Paket als ZIP herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r1.zip) und entpacken.
 2. **Den Inhalt des entpackten Ordners** auf einen leeren USB-Stick kopieren, sodass `START.html` direkt auf dem Stick liegt.
 3. `START.html` doppelklicken. Unter Android den Stick im Dateimanager öffnen und `START.html` mit einem Browser öffnen; Dateimanager und Browser können sich je nach Gerät unterscheiden.
 4. Eigene Fotos, Karten und Dokumente in `personal/` ergänzen. Sensible Dateien nur nach der Anleitung in `private/README.txt` verschlüsseln. Die Ordner funktionieren auch ohne Katalog.
 5. Stick auswerfen, offline erneut öffnen und mindestens eine Datei probeweise zurückkopieren. Eine zweite Kopie getrennt aufbewahren.
 
-Der ausführliche Starterguide und das Quellenverzeichnis liegen im ZIP. Die bearbeitbaren Quelldateien stehen im Branch `country/DE`.
+[Deutschland (`de-DE`) ansehen](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE) · [Starterguide](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/STARTERGUIDE.md) · [Quellen](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/SOURCES.md) · [Wartungs-Prompts](https://github.com/MaxWehrle/emergency-usb-stick/blob/maintenance/maintenance/PROMPTS.md)
 
 > Ein digitaler Notfallordner ersetzt weder aktuelle behördliche Warnungen noch Originaldokumente. Bei akuter Gefahr gelten die Anweisungen der örtlichen Einsatzkräfte.
 
@@ -18,7 +18,7 @@ Der ausführliche Starterguide und das Quellenverzeichnis liegen im ZIP. Die bea
 
 | Land | Sprache | Stand | Download |
 |---|---|---|---|
-| Deutschland | de-DE | 09.11.2026, erste recherchierte Fassung | [Paket-ZIP](releases/DE-2026.11.09-r1.zip) |
+| Deutschland | de-DE | 09.11.2026, erste recherchierte Fassung | [Paket-ZIP direkt herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r1.zip) · [Datei im Repository](releases/DE-2026.11.09-r1.zip) |
 
 Weitere Länder erscheinen erst nach Übersetzung **und** eigener regionaler Quellenprüfung. Sprache und Land sind getrennte Angaben.
 
