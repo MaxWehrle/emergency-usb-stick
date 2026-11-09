@@ -21,7 +21,7 @@ Reviewed Nov 9, 2026. This plan applies to the German and U.S. editions. It reco
 
 ## File architecture
 
-At the extracted package root: `START.html`, a country-specific `00-READ-ME...pdf`/`00-LIESMICH...pdf`, the same instructions as `.txt`, `README.md` for GitHub, and clearly named user folders. `Infrastructure` or `Infrastruktur` holds sources, license, project documentation, and code. The PDF explains the fallback when local HTML will not open.
+The extracted package root contains only `START.html`, a country-specific PDF guide, the same instructions as `.txt`, and clearly named user folders. `Infrastructure` or `Infrastruktur` holds sources, license, project documentation, and code. The PDF explains the fallback when local HTML will not open.
 
 Situation guides are ordinary `.txt` files. The HTML page and search are an additional route. Search uses no external library. Without JavaScript, all topics remain visible. Added personal files remain accessible in their folders without running the optional index tool. No private user files are bundled.
 
