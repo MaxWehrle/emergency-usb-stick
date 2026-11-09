@@ -23,9 +23,21 @@ sources = (root / 'SOURCES.md').read_text(encoding='utf-8') if (root / 'SOURCES.
 source_ids = set(re.findall(r'^\| ([A-Z][A-Z0-9-]+) \|', sources, re.M))
 urls = sorted(set(re.findall(r'https?://[^\s|)>]+', sources)))
 today = date.today()
-cards = list((root / 'content').glob('*.json'))
+cards = [p for p in (root / 'content').glob('*.json') if p.name != 'site.json']
 if len(cards) < 9:
     errors.append(f'Only {len(cards)} cards')
+site_path = root / 'content/site.json'
+if site_path.is_file():
+    try:
+        site = json.loads(site_path.read_text(encoding='utf-8'))
+        locale = site['locale']
+        country = site['country_code']
+        if not re.fullmatch(r'[a-z]{2,3}-[A-Z]{2}', locale) or locale.split('-')[-1] != country:
+            errors.append('site.json: locale and country code disagree')
+        if (root / 'START.html').is_file() and f'<html lang="{locale}"' not in (root / 'START.html').read_text(encoding='utf-8'):
+            errors.append('START.html: language tag differs from site.json')
+    except (ValueError, KeyError, json.JSONDecodeError) as exc:
+        errors.append(f'site.json: {exc}')
 for path in cards:
     try:
         c = json.loads(path.read_text(encoding='utf-8'))

@@ -17,7 +17,7 @@ Prüfe Kaufbeispiele für {LAND} am {DATUM}. Verwende Herstellerangaben und echt
 ## Regionalisierung
 
 ```text
-Bereite einen neuen Branch country/{LAND} für {SPRACHE} vor. Beginne mit main, regionalisiere alle Themen anhand zuständiger lokaler Primärquellen: Warnsystem, Nummern, Wasser, Gesundheit, Wetter, Behörden, Recht, Hardwaremarkt. Übernimm keine deutschen Regionalangaben ungeprüft. Erfasse Quelle, Nutzungsrechte, Veröffentlichungs- und Prüfdatum. Erzeuge START.html und normale Textdateien, prüfe offline und auf verfügbaren Geräten. Liste fehlende Fachprüfungen; kennzeichne den Branch bis zu deren Abschluss ausdrücklich als Entwurf.
+Bereite einen neuen Branch country/{LAND} für {SPRACHE} vor. Beginne mit main, regionalisiere alle Themen anhand zuständiger lokaler Primärquellen: Warnsystem, Nummern, Wasser, Gesundheit, Wetter, Behörden, Recht, Hardwaremarkt. Berücksichtige Bundesstaaten, Territorien oder andere Unterregionen mit einer klaren lokalen Vorlage, wenn nationale Angaben allein nicht reichen. Übernimm keine Angaben anderer Länder ungeprüft. Übersetze auch Oberfläche, Ordnernamen, persönliche Vorlagen und Tests. Erfasse Quelle, Nutzungsrechte, Veröffentlichungs- und Prüfdatum. Erzeuge START.html und normale Textdateien, prüfe offline und auf verfügbaren Geräten. Liste fehlende Fachprüfungen; kennzeichne den Branch bis zu deren Abschluss ausdrücklich als Entwurf.
 ```
 
 ## Sicherheit und Datenschutz
