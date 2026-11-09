@@ -31,8 +31,8 @@ with TemporaryDirectory() as tmp:
         assert z.testzip() is None
         names = z.namelist()
         assert all(not n.startswith(('.git/', 'dist/', 'personal/', 'private/', 'tools/', 'content/')) for n in names)
-        assert {'00-LIESMICH-DE.pdf', '00-LIESMICH-DE.txt', 'START.html', 'README.md'} <= set(names)
-        assert all(n.split('/')[0] in {'00-LIESMICH-DE.pdf', '00-LIESMICH-DE.txt', 'START.html', 'README.md', 'Anleitungen', 'Eigene-Dateien', 'Vertrauliche-Dateien', 'Infrastruktur'} for n in names)
+        assert {'00-LIESMICH-DE.pdf', '00-LIESMICH-DE.txt', 'START.html'} <= set(names)
+        assert all(n.split('/')[0] in {'00-LIESMICH-DE.pdf', '00-LIESMICH-DE.txt', 'START.html', 'Anleitungen', 'Eigene-Dateien', 'Vertrauliche-Dateien', 'Infrastruktur'} for n in names)
         z.extractall(target)
     start = target / 'START.html'
     assert start.is_file()

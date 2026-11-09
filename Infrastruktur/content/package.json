@@ -2,7 +2,6 @@
   "release": "DE-2026.11.09-r5.zip",
   "pdf": "00-LIESMICH-DE.pdf",
   "txt": "00-LIESMICH-DE.txt",
-  "readme": "README.md",
   "starter": "Infrastruktur/ANLEITUNG.md",
   "sources": "Infrastruktur/QUELLEN.md",
   "license": "Infrastruktur/LIZENZ.txt",
