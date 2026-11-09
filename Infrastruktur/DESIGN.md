@@ -21,7 +21,7 @@ Stand: 09.11.2026. Dieser Plan gilt für die deutschen und US-amerikanischen Lä
 
 ## Dateiarchitektur
 
-Im Root des entpackten Pakets liegen `START.html`, eine länderspezifische `00-LIESMICH...pdf`/`00-READ-ME...pdf`, dieselbe Anleitung als `.txt`, `README.md` für GitHub sowie die für Nutzer wichtigen Ordner. `Infrastruktur` bzw. `Infrastructure` bündelt Quellen, Lizenz, Projektunterlagen und Code. Die PDF erklärt auch, was zu tun ist, wenn lokale HTML-Dateien auf einem Gerät nicht geöffnet werden.
+Im Root des entpackten Pakets liegen nur `START.html`, eine länderspezifische PDF-Anleitung, dieselbe Anleitung als `.txt` und die für Nutzer wichtigen Ordner. `Infrastruktur` bzw. `Infrastructure` bündelt Quellen, Lizenz, Projektunterlagen und Code. Die PDF erklärt auch, was zu tun ist, wenn lokale HTML-Dateien auf einem Gerät nicht geöffnet werden.
 
 Die Lagekarten sind als `.txt` direkt zugänglich; HTML und Suche ergänzen diesen Weg. Die Suche läuft ohne externe Bibliotheken. Ohne JavaScript bleiben alle Themen sichtbar. Neue eigene Dateien liegen auch ohne Indexprogramm in ihren Ordnern. Vertrauliche Dateien werden **nicht** mitgeliefert.
 
