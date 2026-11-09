@@ -2,7 +2,6 @@
   "release": "US-2026.11.09-r2.zip",
   "pdf": "00-READ-ME-US.pdf",
   "txt": "00-READ-ME-US.txt",
-  "readme": "README.md",
   "starter": "Infrastructure/GET-STARTED.md",
   "sources": "Infrastructure/SOURCES.md",
   "license": "Infrastructure/LICENSE.txt",

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const vm = require('vm');
 const assert = require('assert');
 const cards = [
@@ -11,7 +12,7 @@ const input = {value:'',addEventListener:(name,fn)=>{listeners[`input:${name}`]=
 const clear = {addEventListener:(name,fn)=>{listeners[`clear:${name}`]=fn}};
 const count = {textContent:'',dataset:{available:'{total} situations available.',found:'{shown} of {total} situations found.'}};
 const document = {documentElement:{lang:'en-US'},getElementById:id=>id==='search'?input:id==='clear-search'?clear:count,querySelectorAll:()=>cards};
-vm.runInNewContext(fs.readFileSync('assets/app.js','utf8'),{document});
+vm.runInNewContext(fs.readFileSync(path.resolve(__dirname,'../assets/app.js'),'utf8'),{document});
 assert.equal(count.textContent,'3 situations available.');
 input.value='water'; listeners['input:input']();
 assert.deepEqual(cards.map(c=>c.hidden),[false,true,true]);
