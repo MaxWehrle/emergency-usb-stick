@@ -1,0 +1,14 @@
+# Alerts and communication
+
+A phone alert is only one way to learn what is happening.
+
+## What to do
+
+1. When service works, check alerts from your local emergency management agency and National Weather Service.
+2. Wireless Emergency Alerts, radio/TV alerts, and NOAA Weather Radio may carry official warnings. Reception and coverage vary by location and equipment.
+3. Keep a paper contact list, a battery-powered radio, and a family meeting plan. An out-of-area contact can help reconnect people.
+4. If you cannot reach 911, look for locally announced alternatives; do not assume a nationwide backup number.
+
+Reviewed: 2026-11-09 · time-sensitive
+Source IDs: FEMA-IPAWS, NOAA-RADIO, US-911, FEMA-PLAN
+Details and original sources: ../SOURCES.md

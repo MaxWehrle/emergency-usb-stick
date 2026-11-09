@@ -1,5 +1,5 @@
-# Beitragen
+# Contributing
 
-Bitte melde Fehler mit Fundstelle, beobachtetem Problem, Land, Sprache und Datum als GitHub-Issue. Sende keine persönlichen Unterlagen, Kontaktdaten, Passwörter oder Schlüssel. Für sicherheitskritische Korrekturen sind aktuelle Primärquellen und eine nachvollziehbare menschliche Prüfung erforderlich. Unbestätigte Angaben bleiben unveröffentlicht.
+Report an error in a GitHub issue with its location, what is wrong, country, language, and date. Do not post personal documents, contact details, passwords, or keys. Safety-critical corrections require current primary sources and traceable human review. Unconfirmed claims stay unpublished.
 
-Technische Änderungen beginnen auf `main`. Länderinhalte liegen ausschließlich auf `country/<ISO-3166-1-alpha-2>`. Beschreibe bei Änderungen an einer Lagekarte die betroffenen Quellen und das Prüfdatum. Nutze Pull Requests und prüfe vor dem Merge die erzeugte `START.html` offline.
+Start shared technical changes on `main`. Country content belongs on `country/<ISO-3166-1-alpha-2>`. For changes to a situation card, name the sources and review date. Use a pull request and test the generated `START.html` offline before merging. Local details must be checked for the relevant state, tribal nation, territory, county, or city; a translation alone does not count as regional review.

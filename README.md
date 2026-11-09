@@ -1,37 +1,25 @@
-# Notfall-USB-Stick · offene Vorlage
+# Emergency USB · United States (en-US)
 
-Ein einfacher Notfall-Ordner für einen USB-Stick. Die Startseite funktioniert ohne Internet und ohne Installation. Alle Themen liegen zusätzlich als normale Textdateien bereit.
+This is a folder of short emergency guides you can keep on a USB drive. `START.html` works without internet or installation. The same guides are ordinary text files in `guides/`.
 
-## Deutschland: in fünf Schritten
+## Make your USB drive
 
-1. [Deutsches Paket herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r3.zip). Es ist eine **ZIP-Datei**: eine gepackte Sammlung von Dateien.
-2. Öffnen Sie auf Windows **Downloads**. Klicken Sie mit der rechten Maustaste auf die ZIP-Datei und wählen Sie **Alle extrahieren**. So holen Sie die Dateien in einen normalen Ordner.
-3. Stecken Sie einen USB-Stick ein. Kopieren Sie **alles aus dem entpackten Ordner** auf den Stick. Danach muss die Datei `START.html` direkt auf dem Stick zu sehen sein.
-4. Klicken Sie zweimal schnell auf `START.html`. Auf Android öffnen Sie den Stick in der App **Dateien** und tippen auf `START.html`. Wenn das nicht klappt, lesen Sie die Dateien im Ordner `guides`.
-5. Ergänzen Sie eigene Dateien im Ordner `personal`. Testen Sie den Stick ohne Internet und kopieren Sie eine Datei probeweise zurück. Legen Sie eine zweite Kopie an einem anderen Ort ab.
+1. [Download the U.S. ZIP package](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/US-2026.11.09-r1.zip). A ZIP is one compressed file containing the package.
+2. **Extract** it. On Windows, open **Downloads**, right-click the ZIP and choose **Extract All**. On Android, open it in **Files** and choose **Extract**. See the [detailed guide](STARTERGUIDE.md).
+3. Insert a USB drive. Copy **everything inside the extracted folder** onto it. `START.html` must be visible directly on the drive, next to `guides/` and `personal/`.
+4. Open `START.html` from the drive. On Android, use your file manager and select a browser if asked. If your phone cannot open local HTML, use the text files in `guides/`.
+5. Add your own non-sensitive files in `personal/`. Test without internet and copy a test file **back** to your device. Make a second full copy, kept elsewhere.
 
-[Anleitung mit ganz kleinen Schritten](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/STARTERGUIDE.md) · [Deutschland (`de-DE`) ansehen](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE) · [Quellen](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/SOURCES.md) · [Wartungs-Prompts](https://github.com/MaxWehrle/emergency-usb-stick/blob/maintenance/maintenance/PROMPTS.md)
+[Detailed first-time guide](STARTERGUIDE.md) · [Sources and review dates](SOURCES.md) · [Project homepage](https://github.com/MaxWehrle/emergency-usb-stick)
 
-> Ein digitaler Notfallordner ersetzt weder aktuelle behördliche Warnungen noch Originaldokumente. Bei akuter Gefahr gelten die Anweisungen der örtlichen Einsatzkräfte.
+For immediate danger in the U.S., call **911**. This package cannot show current alerts, open shelters, evacuation orders, or water advisories. Follow local officials. Digital copies do not replace original documents.
 
-## Verfügbare Fassungen
+## What is here
 
-| Land | Sprache | Stand | Download |
-|---|---|---|---|
-| Deutschland | de-DE | 09.11.2026, einfache Anleitung, Revision 3 | [Paket-ZIP direkt herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r3.zip) · [Datei im Repository](releases/DE-2026.11.09-r3.zip) |
+- `START.html`: offline start page, situation cards, search, sources and folder links.
+- `guides/`: ordinary readable text guides.
+- `personal/Photos`, `Maps`, `Documents`, `Local-Info`: empty folders for your own files. Fill the [local information template](templates/LOCAL-INFO-TEMPLATE.txt) on your personal copy.
+- `private/README.txt`: how to set up and test an encrypted vault. No vault is included.
+- `SOURCES.md`: U.S. primary sources, rights and review dates. Third-party publications are linked, not bundled.
 
-Weitere Länder erscheinen erst nach Übersetzung **und** eigener regionaler Quellenprüfung. Sprache und Land sind getrennte Angaben.
-
-## Aufbau und Releases
-
-- `main`: gemeinsame Technik, Projektstart, Beiträge und Lizenz.
-- `country/DE`: vollständiges deutsches USB-Paket. Weitere Länder: `country/FR`, `country/GB` usw. Sprachvarianten tragen BCP-47-Tags wie `de-DE`.
-- `maintenance`: Prüfabläufe, Vorlagen und Prompts ohne private Daten.
-
-Gemeinsame technische Änderungen werden auf `main` geprüft und per selektivem `git cherry-pick` oder gezieltem Dateiabgleich in Länder-Branches übernommen. Dateien unter `content/`, `guides/`, `SOURCES.md` und `STARTERGUIDE.md` sind regional und werden dabei nicht automatisch überschrieben. Nach dem Abgleich `python tools/build.py` und `python tools/verify.py` ausführen und die erzeugte Oberfläche prüfen. Länder-Releases heißen `DE-YYYY.MM.DD-rN`; das Release-ZIP enthält den **Inhalt** des Länder-Branches und wird vor Veröffentlichung gegen dessen Commit-Prüfsummen geprüft. Das Paket `DE-2026.11.09-r3.zip` hat SHA-256 `3167bfe75dd144f91622f54616f4215a390b32c1d6aa8db4a4f5fd159df8a738`.
-
-GitHub Actions mit `schedule` laufen nur vom Default-Branch. Deshalb liegt der technische Prüfauslöser auf `main`; fachliche und regionale Prüfabläufe stehen in `maintenance` und werden nicht durch einen automatischen grünen Haken ersetzt. `workflow_dispatch` wird ebenfalls auf `main` gehalten, damit es leicht auffindbar ist.
-
-## Lizenz
-
-Eigene Software und Texte: MIT, siehe [LICENSE](LICENSE). Verlinkte Inhalte Dritter bleiben bei deren Rechteinhabern und sind nicht Teil dieser Lizenz. Es werden keine fremden PDFs oder privaten Medien mitgeliefert.
+This branch is for the **United States** in **English (en-US)**. National guidance needs a local plan for your state, tribal nation, territory, county, or city. English does not imply another country. Project texts and code: [MIT license](LICENSE). Linked content retains its own rights.
