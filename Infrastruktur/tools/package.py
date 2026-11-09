@@ -108,7 +108,7 @@ for dst in list(output):
     if dst == cfg["starter"]:
         text = output[dst].decode("utf-8")
         asset = f'{cfg["illustrations"]}/{cfg["connector_name"]}'
-        text = text.replace(asset, f'Bilder/{cfg["connector_name"]}')
+        text = text.replace(asset, f'{Path(cfg["illustrations"]).name}/{cfg["connector_name"]}')
         output[dst] = text.encode("utf-8")
 
 start_html = output["START.html"].decode("utf-8")
