@@ -2,47 +2,49 @@
 
 ![Emergency USB Stick: offline guides for Germany and the United States](assets/repo-social-preview.png)
 
-Offline-Hinweise für den USB-Stick, ergänzt durch Platz für eigene Dateien. Die Pakete funktionieren ohne Installation und ohne Internet. Jede Länderfassung hat geprüfte regionale Inhalte; Sprache und Land sind getrennt ausgewiesen.
+Ein USB-Stick mit kurzen Hinweisen für schwierige Situationen und Platz für eigene Dateien. **Nach dem Herunterladen funktioniert das Paket ohne Internet und ohne Installation.** Die Länderfassungen enthalten eigene regionale Hinweise; Sprache und Land werden getrennt angegeben.
 
-Offline emergency guides for a USB drive, with space for your own files. Each country package includes reviewed regional information and identifies its language separately.
+A USB drive with short emergency guides and room for your own files. **After download, the package works offline without installing anything.** Each country edition has its own reviewed regional guidance.
 
-## Pakete / Packages
+## Paket auswählen / Choose a package
 
-| Land / Country | Sprache / Language | Stand / Release | Download | Quellen / Sources |
+| Land / Country | Sprache / Language | Download | Anleitung als PDF | Prüfstand |
 |---|---|---|---|---|
-| Deutschland | de-DE | 09.11.2026 · Revision 4 | [Deutsches Paket herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r4.zip) | [Deutschland](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/SOURCES.md) |
-| United States | en-US | Nov 9, 2026 · revision 1 | [Download U.S. package](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/US-2026.11.09-r1.zip) | [United States](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/US/SOURCES.md) |
+| Deutschland | de-DE | [Deutsches Paket (ZIP)](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r5.zip) | [00-LIESMICH-DE.pdf](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/00-LIESMICH-DE.pdf) | 09.11.2026 · Revision 5 |
+| United States | en-US | [U.S. package (ZIP)](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/US-2026.11.09-r2.zip) | [00-READ-ME-US.pdf](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/US/00-READ-ME-US.pdf) | Nov 9, 2026 · revision 2 |
 
-### Deutsch: Stick vorbereiten
+### In wenigen Schritten / In a few steps
 
-1. [Deutsches Paket herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r4.zip) und die ZIP-Datei entpacken.
-2. Den **Inhalt des entpackten Ordners** auf einen USB-Stick kopieren. `START.html` soll direkt auf dem Stick liegen.
-3. `START.html` vom Stick öffnen. Auf Android geht das über die Dateien-App; falls lokale HTML-Dateien nicht geöffnet werden, stehen alle Hinweise auch im Ordner `guides`.
-4. Eigene Dateien in `personal` ergänzen. Den Stick offline testen und eine Testdatei zurück auf das Gerät kopieren. Eine zweite vollständige Kopie getrennt aufbewahren.
+1. Laden Sie das Paket für Ihr Land herunter und entpacken Sie die ZIP-Datei. / Download your country's package and extract the ZIP.
+2. Kopieren Sie den **Inhalt** des entpackten Ordners auf einen USB-Stick. `START.html` und die PDF-Anleitung sollen direkt auf dem Stick liegen. / Copy the **contents** of the extracted folder to a USB drive. `START.html` and the PDF guide should be at the top level.
+3. Öffnen Sie `START.html`. Die Hinweise stehen auch als normale Textdateien in `Anleitungen` (DE) oder `Guides` (US). Auf Android können Sie den Stick mit einem passenden Anschluss oder Adapter in der Dateien-App öffnen; ob lokale HTML-Dateien starten, hängt vom Gerät und der App ab. / Open `START.html`. Guides are also ordinary text files in `Guides`. On Android, a suitable connector or adapter and Files app may be needed; local HTML support varies by device and app.
+4. Lesen Sie die PDF-Anleitung auf dem Stick. Eigene Dateien gehören in `Eigene-Dateien` (DE) oder `My-Files` (US). Testen Sie das Öffnen ohne Internet und kopieren Sie eine Testdatei zurück. Bewahren Sie eine zweite Kopie getrennt auf. / Read the PDF guide on the drive. Add your files to `My-Files`, test offline, copy a test file back, and keep a second copy elsewhere.
 
-[Ausführlicher Starterguide für Windows und Android](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/STARTERGUIDE.md) · [Deutsche Fassung ansehen](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE)
+Die Anleitungen gibt es zusätzlich als `00-LIESMICH-DE.txt` und `00-READ-ME-US.txt`. Digitale Kopien ersetzen keine Originaldokumente. Bei akuter Gefahr gelten aktuelle örtliche Warnungen und Anweisungen. / Digital copies do not replace original documents. Follow current local warnings and instructions in an emergency.
 
-### English: prepare your drive
+## Was im Paket liegt / What's in the package
 
-1. [Download the U.S. package](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/US-2026.11.09-r1.zip) and extract the ZIP.
-2. Copy **everything inside the extracted folder** to a USB drive. `START.html` should be directly on the drive.
-3. Open `START.html` from the drive. On Android, use your Files app; if local HTML does not open, read the ordinary files in `guides`.
-4. Add your own files in `personal`. Test offline and copy a test file back to your device. Keep a second complete copy elsewhere.
+| Deutschland | United States | Inhalt / Contents |
+|---|---|---|
+| `START.html` | `START.html` | Offline-Übersicht mit Suche / offline guide with search |
+| `00-LIESMICH-DE.pdf` + `.txt` | `00-READ-ME-US.pdf` + `.txt` | Vollständige Anleitung / complete usage guide |
+| `Anleitungen` | `Guides` | Kurze Lagekarten als Textdateien / short situation guides as text files |
+| `Eigene-Dateien` | `My-Files` | Leere Ordner für eigene Medien / empty folders for your files |
+| `Vertrauliche-Dateien` | `Private-Files` | Hinweise zum Schutz sensibler Daten / instructions for protecting sensitive data |
+| `Infrastruktur` | `Infrastructure` | Quellen, Lizenz, Technik und optionale Werkzeuge / sources, license, technical files and optional tools |
 
-[Detailed Windows and Android guide](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/US/STARTERGUIDE.md) · [View U.S. edition](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/US)
+[Deutsche Fassung ansehen](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE) · [View U.S. edition](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/US) · [Quellen DE](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/Infrastruktur/QUELLEN.md) · [U.S. sources](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/US/Infrastructure/SOURCES.md)
 
-**Bei akuter Gefahr gelten aktuelle örtliche Warnungen und Anweisungen. Digitale Kopien ersetzen keine Originaldokumente.** Current local alerts and orders take priority. Digital copies do not replace original documents.
+## Branches und Veröffentlichung / Branches and releases
 
-## Branches and releases
+- `main` enthält die gemeinsame technische Basis, die Projektstartseite, Beitragsregeln, Lizenz und veröffentlichte ZIP-Dateien.
+- `country/DE` enthält das vollständige Paket für Deutschland (`de-DE`); `country/US` enthält das Paket für die USA (`en-US`). Weitere Länder brauchen übersetzte **und regional geprüfte** Inhalte.
+- `maintenance` enthält Wartungsabläufe, Prüfschablonen und [kopierbare Prompts](https://github.com/MaxWehrle/emergency-usb-stick/blob/maintenance/maintenance/PROMPTS.md).
 
-- `main`: shared code, project entry, contribution rules, license, and published ZIPs.
-- `country/DE`: Germany, `de-DE`; `country/US`: United States, `en-US`. Country branches include the complete offline package and regional sources. Add a country only after translation **and** regional review.
-- `maintenance`: audit procedures, check templates, reusable agent prompts, and technical checks. [Maintenance prompts](https://github.com/MaxWehrle/emergency-usb-stick/blob/maintenance/maintenance/PROMPTS.md).
+Länderbranches heißen `country/<ISO-3166-1-alpha-2>`, Sprachvarianten nutzen BCP-47-Tags. Releases heißen `<COUNTRY>-YYYY.MM.DD-rN`. Gemeinsame technische Änderungen werden auf `main` geprüft und anschließend gezielt in jeden Länderbranch übernommen. Regionaler Text, Pfade und Quellen werden dabei einzeln überprüft; die Pakete werden erneut gebaut und geprüft.
 
-Use `country/<ISO-3166-1-alpha-2>` for country branches and BCP-47 tags for language variants. Releases use `<COUNTRY>-YYYY.MM.DD-rN`. For technical changes, review on `main`, then selectively cherry-pick or compare files into each country branch. Never automatically overwrite `content/`, `guides/`, `SOURCES.md`, `STARTERGUIDE.md`, or country folder names. Build and verify each country again after synchronization.
+SHA-256: `DE-2026.11.09-r5.zip` = `dd256490245040c647efbcad2a47aa0d349e577d5b68b9cb54060872e44e7a86`; `US-2026.11.09-r2.zip` = `736d257c62e91f1be1cd2463280462eb8f2ace229280d764727a2e58e8bff1ad`. Ältere Fassungen bleiben unter [releases](releases/) verfügbar.
 
-Release SHA-256 checksums: `DE-2026.11.09-r4.zip` = `c7f4206b86f26a6a419aedf37cf1b5d8d04aa08b4f812d5b2bb0bf9b6dcb6964`; `US-2026.11.09-r1.zip` = `6a8aab3bffa7e0b7450a1add7d6a6b6bd5adfd12ba408f9dcd73375d94e7a508`. Older releases remain in [releases](releases/).
+Geplante GitHub Actions laufen vom Default-Branch; die dortige Workflow-Datei enthält die nötigen Auslöser. Technische Prüfungen ersetzen keine menschliche Quellenprüfung von medizinischen, sicherheitsrelevanten oder regionalrechtlichen Angaben.
 
-GitHub Actions `schedule` runs from the default branch, and manual `workflow_dispatch` is kept there for visibility. Automated checks do not replace human review of safety, medical, legal, and regional claims.
-
-Project code and original text: [MIT license](LICENSE). Linked third-party material remains with its rights holders and is not bundled. Report corrections through [GitHub issues](https://github.com/MaxWehrle/emergency-usb-stick/issues) without posting personal data. See [contribution rules](CONTRIBUTING.md).
+Eigene Texte und Code: [MIT-Lizenz](LICENSE). Verlinkte Inhalte Dritter bleiben bei ihren Rechteinhabern und sind nicht Teil der ZIP-Dateien. Korrekturen bitte über [GitHub Issues](https://github.com/MaxWehrle/emergency-usb-stick/issues) melden, ohne persönliche Daten zu veröffentlichen. Siehe [Beitragsregeln](CONTRIBUTING.md).

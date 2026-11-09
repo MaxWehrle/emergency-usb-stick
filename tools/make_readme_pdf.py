@@ -100,6 +100,24 @@ story += [Paragraph(data["help_title"], heading), Paragraph(data["help"], body),
           Spacer(1, 13), Paragraph(data["privacy"], small),
           Spacer(1, 8), Paragraph(data["safety"], small)]
 
+if data.get("device_sections"):
+    story += [PageBreak(), Paragraph(data["device_title"], title),
+              Paragraph(data["device_intro"], body), Spacer(1, 8)]
+    for section in data["device_sections"]:
+        story.append(Paragraph(section["title"], heading))
+        for i, step in enumerate(section["steps"], 1):
+            story.append(Paragraph(f"<b>{i}.</b> {step}",
+                                   ParagraphStyle(f"device-{len(story)}", parent=body, spaceAfter=8)))
+
+if data.get("care_sections"):
+    story += [PageBreak(), Paragraph(data["care_title"], title),
+              Paragraph(data["care_intro"], body)]
+    for section in data["care_sections"]:
+        story.append(Paragraph(section["title"], heading))
+        for item in section["items"]:
+            story.append(Paragraph(item,
+                                   ParagraphStyle(f"care-{len(story)}", parent=body, spaceAfter=8)))
+
 def page_footer(canvas, document):
     canvas.saveState()
     canvas.setStrokeColor(colors.HexColor("#BED0CA"))
@@ -111,4 +129,21 @@ def page_footer(canvas, document):
     canvas.restoreState()
 
 doc.build(story, onFirstPage=page_footer, onLaterPages=page_footer)
+plain = [data["title"], data["subtitle"], "", data["lead"], "", data["steps_title"], ""]
+plain += [f'{i}. {item["title"]}\n{item["text"]}\n' for i, item in enumerate(data["steps"], 1)]
+plain += [data["first_page_note"].replace("<b>", "").replace("</b>", ""), "",
+          data["folders_title"], data["folders_intro"], ""]
+plain += [f'{folder["name"]}\n{folder["description"]}\n' for folder in data["folders"]]
+plain += [data["help_title"], data["help"], "", data["privacy"], "", data["safety"], ""]
+if data.get("device_sections"):
+    plain += [data["device_title"], data["device_intro"], ""]
+    for section in data["device_sections"]:
+        plain += [section["title"]]
+        plain += [f"{i}. {step}" for i, step in enumerate(section["steps"], 1)]
+        plain += [""]
+if data.get("care_sections"):
+    plain += [data["care_title"], data["care_intro"], ""]
+    for section in data["care_sections"]:
+        plain += [section["title"], *section["items"], ""]
+(root / data["txt_filename"]).write_text("\n".join(plain), encoding="utf-8", newline="\n")
 print(f"Created {out}")

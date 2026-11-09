@@ -10,9 +10,10 @@ import json
 import re
 
 root = Path(__file__).resolve().parents[1]
+user_root = root.parent if root.name in {"Infrastruktur", "Infrastructure"} else root
 cfg = json.loads((root / "content/package.json").read_text(encoding="utf-8"))
 
-required = ("release", "pdf", "readme", "starter", "sources", "license",
+required = ("release", "pdf", "txt", "readme", "starter", "sources", "license",
             "guides", "personal", "private", "illustrations", "tools",
             "catalog_script", "manifest", "connector_source", "connector_name",
             "folders", "folder_readme", "empty_message")
@@ -46,6 +47,7 @@ for src, key in (("README.md", "readme"), ("STARTERGUIDE.md", "starter"),
     add(src, cfg[key])
 add("START.html", "START.html")
 add(cfg["pdf"], cfg["pdf"], text=False)
+add(cfg["txt"], cfg["txt"])
 add(cfg["connector_source"], f'{cfg["illustrations"]}/{cfg["connector_name"]}')
 add("private/README.txt", f'{cfg["private"]}/{cfg["folder_readme"]}')
 
@@ -80,6 +82,14 @@ catalog = catalog.replace("__EMPTY_MESSAGE__", cfg["empty_message"])
 catalog_path = f'{cfg["tools"]}/{cfg["catalog_script"]}'
 files[catalog_path] = (catalog.encode("utf-8"), True)
 
+if cfg.get("source_code"):
+    for subdir in ("assets", "content", "tools", "tests"):
+        for path in sorted((root / subdir).rglob("*")):
+            if path.is_file() and "__pycache__" not in path.parts:
+                rel = path.relative_to(root).as_posix()
+                dest = safe_rel(f'{cfg["source_code"]}/{rel}')
+                files[dest] = (path.read_bytes().replace(b"\r\n", b"\n"), False)
+
 def canonical(data):
     return data.replace(b"\r\n", b"\n")
 
@@ -93,6 +103,13 @@ for dst, (data, is_text) in files.items():
             content = re.sub(r"(?m)^#{1,3} ", "", content).replace("**", "")
         data = content.encode("utf-8")
     output[dst] = data
+
+for dst in list(output):
+    if dst == cfg["starter"]:
+        text = output[dst].decode("utf-8")
+        asset = f'{cfg["illustrations"]}/{cfg["connector_name"]}'
+        text = text.replace(asset, f'{Path(cfg["illustrations"]).name}/{cfg["connector_name"]}')
+        output[dst] = text.encode("utf-8")
 
 start_html = output["START.html"].decode("utf-8")
 if start_html.count("<!-- PERSONAL-INDEX-START -->") != 1 or start_html.count("<!-- PERSONAL-INDEX-END -->") != 1:
@@ -110,4 +127,8 @@ with ZipFile(release, "w", ZIP_DEFLATED) as archive:
         info.compress_type = ZIP_DEFLATED
         info.external_attr = 0o644 << 16
         archive.writestr(info, output[name])
+for name, data in output.items():
+    target = user_root / name
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(data)
 print(f"{release} SHA-256 {sha256(release.read_bytes()).hexdigest()}")

@@ -16,7 +16,7 @@ END_MARKER = "<!-- PERSONAL-INDEX-END -->"
 if not FOLDERS:
     raise SystemExit("This script must be taken from a country release ZIP.")
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 page = root / "START.html"
 html = page.read_text(encoding="utf-8")
 if html.count(START_MARKER) != 1 or html.count(END_MARKER) != 1:

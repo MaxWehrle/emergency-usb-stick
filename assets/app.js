@@ -1,17 +1,22 @@
 (() => {
   const input = document.getElementById('search');
-  const cards = [...document.querySelectorAll('[data-card]')];
+  const clear = document.getElementById('clear-search');
   const count = document.getElementById('count');
-  if (!input) return;
+  const cards = [...document.querySelectorAll('[data-card]')];
+  if (!input || !count) return;
   const locale = document.documentElement.lang || 'en-US';
-  const normal = s => s.toLocaleLowerCase(locale).normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-  function update(){
-    const q = normal(input.value.trim());
+  const normal = value => value.toLocaleLowerCase(locale).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  function update() {
+    const query = normal(input.value.trim());
     let shown = 0;
-    cards.forEach(card => { const hit = !q || normal(card.textContent).includes(q); card.hidden = !hit; if(hit) shown++; });
-    const template = q ? count.dataset.found : count.dataset.available;
+    cards.forEach(card => {
+      card.hidden = !!query && !normal(card.textContent).includes(query);
+      if (!card.hidden) shown++;
+    });
+    const template = query ? count.dataset.found : count.dataset.available;
     count.textContent = template.replace('{shown}', shown).replace('{total}', cards.length);
   }
   input.addEventListener('input', update);
+  if (clear) clear.addEventListener('click', () => { input.value = ''; update(); input.focus(); });
   update();
 })();

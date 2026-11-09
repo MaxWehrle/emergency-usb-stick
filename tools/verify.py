@@ -6,10 +6,15 @@ from urllib.parse import unquote
 import json
 import re
 import sys
+import subprocess
 
 root = Path(__file__).resolve().parents[1]
 failures = []
-for path in root.rglob('*'):
+tracked = subprocess.check_output(['git', '-c', f'safe.directory={root.as_posix()}', 'ls-files', '-z'], cwd=root).split(b'\0')
+for entry in tracked:
+    if not entry:
+        continue
+    path = root / entry.decode('utf-8')
     if not path.is_file() or '.git' in path.parts or 'dist' in path.parts:
         continue
     rel = path.relative_to(root).as_posix()
@@ -17,7 +22,7 @@ for path in root.rglob('*'):
         failures.append(f'Unexpected private file: {rel}')
     if rel.startswith('personal/') and not rel.endswith('/README.txt'):
         failures.append(f'Unexpected personal file: {rel}')
-    if path.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp', '.pdf', '.docx', '.xlsx', '.mp4'}:
+    if path.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp', '.pdf', '.docx', '.xlsx', '.mp4'} and rel != 'assets/repo-social-preview.png':
         failures.append(f'Unexpected media: {rel}')
     if path.suffix.lower() in {'.html', '.md', '.txt', '.json', '.py', '.js', '.css', '.yml'}:
         data = path.read_text(encoding='utf-8')
