@@ -1,0 +1,83 @@
+Your emergency USB drive
+A guide for Windows and Android · reviewed Nov 9, 2026
+
+This package contains short guides for emergencies. You can open it without internet. Follow current local alerts and responders first.
+
+Five steps to a ready drive
+
+1. Extract the package
+Download the U.S. ZIP file. Open it in Downloads and choose Extract or Extract All.
+
+2. Copy everything to the USB drive
+Copy all files and folders from the extracted folder. START.html and this PDF should be directly on the USB drive.
+
+3. Open the start page
+Open START.html from the drive. On Android, use your Files app. If that does not work, open Guides and read a .txt file.
+
+4. Add your own files
+My-Files has space for photos, maps, documents, and local information. Put sensitive files only in an encrypted vault you have tested.
+
+5. Test offline and make a second copy
+Turn off internet for a test. Open one guide and copy a harmless test file back to your device. Make a second full copy and keep it elsewhere.
+
+Important: a ZIP file alone on the USB drive is not enough. Copy the files from the extracted folder. If a step is unclear, go through this guide again or test the drive with someone you trust.
+
+What is in each folder?
+The names on the drive describe what belongs there. You can open each folder in File Explorer or your phone's Files app.
+
+START.html
+Start page with search and short situation guides.
+
+Guides
+The same guidance as regular .txt files. Use these if the start page will not open on your phone.
+
+My-Files
+Folders for your Photos, Maps, Documents, and Local-Info. They start empty; README.txt explains each one.
+
+Private-Files
+Instructions for encrypting sensitive files. No vault or passwords are included.
+
+Infrastructure
+Sources, license, detailed project information, and code. You do not need this folder for ordinary use.
+
+If something will not open
+Open the drive in File Explorer or your Files app. In Guides, choose a .txt file for the situation. Test this on your own devices before you need the drive.
+
+Keep personal photos and documents out of the public GitHub repository. Add sensitive documents only after successful encryption and recovery tests.
+
+Digital copies do not replace original documents. Current local alerts and orders take priority over this offline package.
+
+Copy the package to your drive
+Choose the section for the device you have.
+
+With a Windows computer
+1. Open Downloads in File Explorer. Right-click the ZIP you downloaded and choose Extract All.
+2. Open the extracted folder. You should see START.html, 00-READ-ME-US.pdf, Guides, and My-Files.
+3. Plug in the USB drive and open it under This PC in File Explorer. Check any files already on the drive before copying.
+4. Select everything inside the extracted folder with Ctrl + A and copy with Ctrl + C. Open the USB drive and paste with Ctrl + V.
+5. Wait until copying is finished. Open START.html from the drive and read one file from Guides.
+
+With an Android phone only
+1. Open Downloads in your Files app. Tap the ZIP and choose Extract or Unzip.
+2. Connect a compatible USB drive or adapter. Open USB storage in your Files app.
+3. Select all files and folders inside the extracted folder. Choose Copy, then choose USB storage as the destination.
+4. Open START.html from the drive. If your phone cannot open local HTML, read a .txt file in Guides.
+
+Your files and upkeep
+The drive is most useful after you add the files your household needs and test how to get them back.
+
+What you can add
+Photos: your own pictures. Maps: offline maps you may lawfully keep. Documents: your own non-sensitive files. Local-Info: a personal copy of the blank template, filled with checked local information.
+A contact list, charger, suitable adapter, and flashlight may also help. Digital document copies do not replace originals.
+
+Sensitive files
+IDs, health information, and other sensitive details belong only in an encrypted vault you have actually opened and tested on Windows and Android. Instructions are in Private-Files/README.txt.
+Keep the password and recovery key away from the drive. The public package contains no personal data, passwords, or keys.
+
+How much storage?
+Check the size of your files and add about one third as spare room. For 5 GB of files, consider 16-32 GB; for 35 GB, about 64 GB; for 140 GB, about 256 GB. Usable space may be lower than the label.
+Check that the USB connector and any adapter fit your devices. A matching plug alone does not guarantee your phone can read the drive.
+
+Two copies and a recovery test
+Make a second complete copy and keep it in another place. Check both after changes and regularly, for example every three months.
+Copy a harmless test file from the drive back to your device and open the returned copy. That tests the recovery path on your own device.

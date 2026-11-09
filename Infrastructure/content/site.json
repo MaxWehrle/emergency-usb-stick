@@ -1,0 +1,23 @@
+{
+  "locale": "en-US",
+  "title": "Emergency USB Stick | United States",
+  "skip": "Skip to content",
+  "brand": "EMERGENCY USB STICK",
+  "edition": "United States · en-US · offline",
+  "eyebrow": "Short guides for emergencies",
+  "headline": "What do you need now?",
+  "lead": "Choose a situation or search for a word. Every guide is also saved as an ordinary text file on this drive.",
+  "emergency": {"title": "Immediate danger?", "text": "In the United States, call 911 for police, fire, or ambulance emergencies. Tell the call-taker where you are and follow their instructions.", "source": "National 911 Program · checked Nov 9, 2026"},
+  "offline_note": "This drive cannot show live alerts. Check official local information when you can. Follow current instructions from responders.",
+  "search": {"label": "Search for a situation", "placeholder": "For example: water, power, heat", "clear": "Clear", "available": "{total} situations available.", "found": "{shown} of {total} situations found."},
+  "links": {"label": "Other ways to use this drive", "pdf": "Read-me PDF", "txt": "Read-me text file", "personal": "Your files"},
+  "pdf": "00-READ-ME-US.pdf",
+  "txt": "00-READ-ME-US.txt",
+  "topics_title": "Situations and next steps",
+  "card": {"show": "Show steps", "hide": "Close", "time": "Check current local guidance", "stable": "Basic step", "reviewed": "reviewed", "file": "Open as text file", "sources": "Sources"},
+  "personal": {"title": "Your files", "lead": "Put your own photos, maps, and documents in these folders. You can also open them directly in a file manager.", "private": "Sensitive files: read the encryption guide first", "indexed": "Direct links to your files", "empty": "No personal files linked yet. Open the folders directly.", "rebuild": "The folders work without extra software. An optional program to refresh these links is in the Infrastructure folder."},
+  "folders": [{"path": "Photos", "label": "Photos"}, {"path": "Maps", "label": "Maps"}, {"path": "Documents", "label": "Documents"}, {"path": "Local-Info", "label": "Local information"}],
+  "sources": {"title": "Sources and review dates", "lead": "These guides draw on the listed sources. Alerts and local rules can change.", "link": "Open the source list"},
+  "guide": {"heading": "What you can do", "reviewed": "Reviewed", "sources": "Sources", "details": "Original sources: ../SOURCES.md"},
+  "footer": "Emergency USB Stick · United States · Nov 9, 2026"
+}

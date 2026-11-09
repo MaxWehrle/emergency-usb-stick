@@ -1,0 +1,14 @@
+Documents and records
+
+Keep important originals protected and make readable backup copies.
+
+What you can do
+
+1. Collect the IDs, insurance information, medical records, and other documents that matter to your household.
+2. Put sensitive digital copies in a tested encrypted vault. Keep its password and recovery key separate from the drive.
+3. Store original documents safely; a digital copy may not satisfy a specific agency's requirements.
+4. Test opening a backup copy on another device and keep a second encrypted copy elsewhere.
+
+Reviewed: 2026-11-09
+Sources: CDC-DOCS, CRYPTO-RECOVERY
+Original sources: ../Infrastructure/SOURCES.md

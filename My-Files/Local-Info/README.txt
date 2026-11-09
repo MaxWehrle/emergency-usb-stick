@@ -1,0 +1,1 @@
+Your local plan belongs here. Copy My-Files/Local-Info/LOCAL-INFO-TEMPLATE.txt to local-info.txt on your own USB drive and fill it in. Local evacuation zones, shelters, hazards, and agencies vary. Do not upload personal details to a public Git branch.

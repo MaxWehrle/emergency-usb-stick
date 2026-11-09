@@ -1,0 +1,23 @@
+{
+  "release": "US-2026.11.09-r2.zip",
+  "pdf": "00-READ-ME-US.pdf",
+  "txt": "00-READ-ME-US.txt",
+  "readme": "README.md",
+  "starter": "Infrastructure/GET-STARTED.md",
+  "sources": "Infrastructure/SOURCES.md",
+  "license": "Infrastructure/LICENSE.txt",
+  "guides": "Guides",
+  "personal": "My-Files",
+  "private": "Private-Files",
+  "illustrations": "Infrastructure/Illustrations",
+  "tools": "Infrastructure/Tools",
+  "catalog_script": "UPDATE-CATALOG.py",
+  "manifest": "Infrastructure/CHECKSUMS.sha256",
+  "source_code": "Infrastructure/Source-Code",
+  "connector_source": "assets/usb-connectors.svg",
+  "connector_name": "usb-connectors.svg",
+  "folder_readme": "README.txt",
+  "folders": {"Photos": "Photos", "Maps": "Maps", "Documents": "Documents", "Local-Info": "Local-Info"},
+  "extra_files": [{"source": "templates/LOCAL-INFO-TEMPLATE.txt", "dest": "My-Files/Local-Info/LOCAL-INFO-TEMPLATE.txt"}, {"source": "DESIGN.md", "dest": "Infrastructure/DESIGN.md"}],
+  "empty_message": "No personal files linked yet. Open the folders directly."
+}
