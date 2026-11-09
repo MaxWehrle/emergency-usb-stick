@@ -1,37 +1,11 @@
-# Notfall-USB-Stick · offene Vorlage
+# Wartung / Maintenance
 
-Ein einfacher Offline-Ordner mit Lagekarten, Quellen und Platz für eigene Dateien. Er läuft ohne Installation und ohne Internet im Browser; alle Inhalte bleiben zusätzlich als normale Dateien zugänglich.
+Dieser Branch enthält die öffentlichen Prüfabläufe und kopierbaren Prompts für den [Emergency USB Stick](https://github.com/MaxWehrle/emergency-usb-stick). Hier liegen keine persönlichen Daten oder Zugangsdaten.
 
-## Deutschland: in fünf Schritten
+- [Wartungsabläufe](maintenance/WORKFLOWS.md): Quellen, Hardware, Regionalisierung, Sicherheit, technische Übernahme, Release und Nutzerkorrekturen.
+- [Kopierbare Prompts](maintenance/PROMPTS.md) und [Prüfvorlagen](maintenance/CHECKLISTS.md).
+- `python maintenance/audit.py --country <Pfad-zum-Länderbranch-oder-ZIP>` prüft Struktur, Sprache, PDF/TXT, Quellenverweise, lokale Links, Prüfsummen und offensichtliche Datenschutzfehler. `--check-links` ergänzt eine unverbindliche HTTP-Erreichbarkeitsprüfung.
 
-1. [Deutsches Paket als ZIP herunterladen](https://github.com/AkazaTheThird/emergency-usb-stick/archive/refs/heads/country/DE.zip) und entpacken.
-2. **Den Inhalt des entpackten Ordners** auf einen leeren USB-Stick kopieren, sodass `START.html` direkt auf dem Stick liegt.
-3. `START.html` doppelklicken. Unter Android den Stick im Dateimanager öffnen und `START.html` mit einem Browser öffnen; Dateimanager und Browser können sich je nach Gerät unterscheiden.
-4. Eigene Fotos, Karten und Dokumente in `personal/` ergänzen. Sensible Dateien nur nach der Anleitung in `private/README.txt` verschlüsseln. Die Ordner funktionieren auch ohne Katalog.
-5. Stick auswerfen, offline erneut öffnen und mindestens eine Datei probeweise zurückkopieren. Eine zweite Kopie getrennt aufbewahren.
+Die Nutzerpakete liegen auf [`country/DE`](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE) und [`country/US`](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/US). Direkte ZIP-Downloads stehen auf [`main`](https://github.com/MaxWehrle/emergency-usb-stick#paket-auswählen--choose-a-package). Dort stehen auch die jeweils aktuellen Release-Hashes.
 
-**[Deutschland (`de-DE`) ansehen](https://github.com/AkazaTheThird/emergency-usb-stick/tree/country/DE)** · [Starterguide](https://github.com/AkazaTheThird/emergency-usb-stick/blob/country/DE/STARTERGUIDE.md) · [Quellen](https://github.com/AkazaTheThird/emergency-usb-stick/blob/country/DE/SOURCES.md)
-
-> Ein digitaler Notfallordner ersetzt weder aktuelle behördliche Warnungen noch Originaldokumente. Bei akuter Gefahr gelten die Anweisungen der örtlichen Einsatzkräfte.
-
-## Verfügbare Fassungen
-
-| Land | Sprache | Stand | Download |
-|---|---|---|---|
-| Deutschland | de-DE | 09.11.2026, erste recherchierte Fassung | [ZIP des Länder-Branches](https://github.com/AkazaTheThird/emergency-usb-stick/archive/refs/heads/country/DE.zip) |
-
-Weitere Länder erscheinen erst nach Übersetzung **und** eigener regionaler Quellenprüfung. Sprache und Land sind getrennte Angaben.
-
-## Aufbau und Releases
-
-- `main`: gemeinsame Technik, Projektstart, Beiträge und Lizenz.
-- `country/DE`: vollständiges deutsches USB-Paket. Weitere Länder: `country/FR`, `country/GB` usw. Sprachvarianten tragen BCP-47-Tags wie `de-DE`.
-- `maintenance`: Prüfabläufe, Vorlagen und Prompts ohne private Daten.
-
-Gemeinsame technische Änderungen werden auf `main` geprüft und per selektivem `git cherry-pick` oder gezieltem Dateiabgleich in Länder-Branches übernommen. Dateien unter `content/`, `guides/`, `SOURCES.md` und `STARTERGUIDE.md` sind regional und werden dabei nicht automatisch überschrieben. Nach dem Abgleich `python tools/build.py` und `python tools/verify.py` ausführen und die erzeugte Oberfläche prüfen. Länder-Releases heißen `DE-YYYY.MM.DD-rN`; das Release-ZIP enthält den **Inhalt** des Länder-Branches und wird vor Veröffentlichung gegen dessen Commit-Prüfsummen geprüft.
-
-GitHub Actions mit `schedule` laufen nur vom Default-Branch. Deshalb liegt der technische Prüfauslöser auf `main`; fachliche und regionale Prüfabläufe stehen in `maintenance` und werden nicht durch einen automatischen grünen Haken ersetzt. `workflow_dispatch` wird ebenfalls auf `main` gehalten, damit es leicht auffindbar ist.
-
-## Lizenz
-
-Eigene Software und Texte: MIT, siehe [LICENSE](LICENSE). Verlinkte Inhalte Dritter bleiben bei deren Rechteinhabern und sind nicht Teil dieser Lizenz. Es werden keine fremden PDFs oder privaten Medien mitgeliefert.
+Die technische Prüfung ersetzt keine fachliche Freigabe für Medizin, Sicherheit oder regionales Recht. Nicht bestätigte Angaben bleiben außerhalb eines veröffentlichten Pakets.

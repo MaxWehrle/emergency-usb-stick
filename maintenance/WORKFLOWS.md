@@ -2,11 +2,13 @@
 
 Jeder Lauf erhält einen öffentlichen Prüfvermerk mit **Datum, Land, Sprachvariante, Branch-Commit, Primärquelle, Prüfer, Entscheidung und offenen Punkten**. Personenbezogene Meldungsdetails werden vorher entfernt. Bei Konflikten gilt die aktuelle Anweisung der zuständigen lokalen Stelle; die Vorlage selbst wird erst nach belegter Prüfung geändert.
 
+**Aktuelle Pfade:** Das deutsche Paket nutzt `Infrastruktur`, `Anleitungen`, `Eigene-Dateien`, `Vertrauliche-Dateien` und `00-LIESMICH-DE.pdf/.txt`. Das US-Paket nutzt `Infrastructure`, `Guides`, `My-Files`, `Private-Files` und `00-READ-ME-US.pdf/.txt`. Der Quelltext liegt im jeweiligen Infrastrukturordner unter `content`, `tools`, `assets` und `guides`; im ZIP unter `Quellcode` beziehungsweise `Source-Code`. `maintenance/audit.py` akzeptiert sowohl einen Länderbranch-Ordner als auch das Release-ZIP.
+
 ## 1. Quellen, Warnungen, Nummern, Links und Empfehlungen
 
-**Eingaben:** Länder-Branch, `SOURCES.md`, `content/*.json`, letzte Prüfvermerke, zuständige Behörden und Primärquellen.
+**Eingaben:** Länder-Branch, `Infrastruktur/QUELLEN.md` beziehungsweise `Infrastructure/SOURCES.md`, `<Infrastruktur>/content/*.json`, letzte Prüfvermerke, zuständige Behörden und Primärquellen.
 
-**Schritte:** `python maintenance/audit.py --country <Pfad> --check-links` ausführen. Jede als `zeitkritisch` markierte Karte gegen aktuelle Originalseite und zuständige regionale Stelle lesen. Nummern durch die zuständige nationale Regulierungs- oder Notrufstelle bestätigen. Publikationsdatum, Abrufdatum und URL in `SOURCES.md` nachführen. Bei Änderungen Karten und generierte Texte mit `python tools/build.py` aktualisieren.
+**Schritte:** `python maintenance/audit.py --country <Pfad> --check-links` ausführen. Jede als zeitkritisch markierte Karte gegen die aktuelle Originalseite und zuständige regionale Stelle lesen. Nummern durch die zuständige nationale Regulierungs- oder Notrufstelle bestätigen. Publikationsdatum, Abrufdatum und URL im lokalisierten Quellenverzeichnis nachführen. Bei Änderungen Karten und generierte Texte mit `python <Infrastruktur>/tools/build.py` aktualisieren.
 
 **Prüfkriterien:** Jede sicherheitsrelevante Aussage hat eine belastbare Primärquelle; Nummern, Warnkanäle, Gebiet und Sprache passen zum Land. Links funktionieren oder sind mit Ersatzquelle dokumentiert. Aussage und Quelle widersprechen sich nicht.
 
@@ -18,7 +20,7 @@ Jeder Lauf erhält einen öffentlichen Prüfvermerk mit **Datum, Land, Sprachvar
 
 **Eingaben:** Region, Nutzungsgeräte, benötigte Kapazität, bisherige Beispiele, Herstellerdatenblatt und Händlerseiten.
 
-**Schritte:** Kapazitätsrechnung kontrollieren. Anschluss, Dateisystem-Hinweise, Herstellerangaben, Gesamtpreis und Verfügbarkeit auf Händlerseiten mit Abrufdatum erfassen. Affiliate-Parameter aus URLs entfernen. Nur selbst durchgeführte Windows-/Android-Gerätetests als solche nennen. Kaufbeispiele im `STARTERGUIDE.md` aktualisieren.
+**Schritte:** Kapazitätsrechnung kontrollieren. Anschluss, Dateisystem-Hinweise, Herstellerangaben, Gesamtpreis und Verfügbarkeit auf Händlerseiten mit Abrufdatum erfassen. Affiliate-Parameter aus URLs entfernen. Nur selbst durchgeführte Windows-/Android-Gerätetests als solche nennen. Kaufbeispiele in `Infrastruktur/ANLEITUNG.md` oder `Infrastructure/GET-STARTED.md` sowie in der sichtbaren PDF/TXT-Anleitung aktualisieren.
 
 **Prüfkriterien:** Produktmodell und Speichervariante eindeutig; Händler für Zielregion erreichbar; Preis als Momentaufnahme gekennzeichnet; kein unbelegtes Haltbarkeits- oder Kompatibilitätsversprechen.
 
@@ -30,7 +32,7 @@ Jeder Lauf erhält einen öffentlichen Prüfvermerk mit **Datum, Land, Sprachvar
 
 **Eingaben:** ISO-Ländercode, BCP-47-Sprachcode, lokale Fachprüfer, amtliche Quellen, technische Basis von `main`.
 
-**Schritte:** `country/<LAND>` vom aktuellen `main` anlegen. Alle Lagekarten fachlich neu regionalisieren: Notruf, Warnsystem, Wasser, Klima, Behörden, Recht und Bezugsquellen. Übersetzen, leichte Sprache prüfen, lokale Quellen mit Datum und Rechtebasis in `SOURCES.md` erfassen. `START.html` erzeugen und Offline-/Gerätetests durchführen. Regionale Prüfung im PR protokollieren.
+**Schritte:** `country/<LAND>` vom aktuellen `main` anlegen. Alle Lagekarten fachlich neu regionalisieren: Notruf, Warnsystem, Wasser, Klima, Behörden, Recht und Bezugsquellen. Oberfläche, alle nutzerseitigen Ordner, PDF/TXT-Namen, Dateien und Vorlagen übersetzen. Lokale Quellen mit Datum und Rechtebasis im lokalisierten Quellenverzeichnis erfassen. `START.html`, PDF, TXT und ZIP erzeugen und Offline-/Gerätetests durchführen. Regionale Prüfung im PR protokollieren.
 
 **Prüfkriterien:** Land und Sprache explizit; keine ungeprüft übernommenen DE-Nummern, Gesetze oder Behörden; alle Quellen lizenziert oder nur verlinkt; mindestens neun relevante Karten und lokale Tests.
 
@@ -40,9 +42,9 @@ Jeder Lauf erhält einen öffentlichen Prüfvermerk mit **Datum, Land, Sprachvar
 
 ## 4. Sicherheit und Datenschutz
 
-**Eingaben:** gesamter Branch und Historie, ZIP, `.gitignore`, `personal/`, `private/`, Abhängigkeiten.
+**Eingaben:** gesamter Branch und Historie, ZIP, `.gitignore`, `Eigene-Dateien`/`My-Files`, `Vertrauliche-Dateien`/`Private-Files`, Abhängigkeiten.
 
-**Schritte:** `python tools/verify.py`, `python maintenance/audit.py --country <Pfad>` und `git diff --check` ausführen. Mit `git ls-files` sowie `git log --all --name-only` Dateien und Historie auf Medien, PII, Schlüssel und Zugangsdaten prüfen. ZIP-Inhaltsliste kontrollieren. Verschlüsselungsanleitung gegen aktuelle Herstellerdokumentation prüfen; echte Wiederherstellung mit **synthetischer** Testdatei auf verfügbaren Geräten durchführen.
+**Schritte:** `python <Infrastruktur>/tools/verify.py`, `python maintenance/audit.py --country <Pfad-oder-ZIP>` und `git diff --check` ausführen. Mit `git ls-files` sowie `git log --all --name-only` Dateien und Historie auf Medien, PII, Schlüssel und Zugangsdaten prüfen. ZIP-Inhaltsliste kontrollieren. Die einzige mitgelieferte PDF ist die selbst erstellte Anleitung im Paketwurzelverzeichnis. Verschlüsselungsanleitung gegen aktuelle Herstellerdokumentation prüfen; echte Wiederherstellung mit **synthetischer** Testdatei auf verfügbaren Geräten durchführen.
 
 **Prüfkriterien:** keine privaten Daten oder fremden Medien im Repo/ZIP oder in der Historie; keine Passwortbeispiele als echte Geheimnisse; nur belegte Aussagen zur Verschlüsselung. Die `.gitignore` ist zusätzliche Sperre, kein Ersatz für Sichtprüfung.
 
@@ -54,7 +56,7 @@ Jeder Lauf erhält einen öffentlichen Prüfvermerk mit **Datum, Land, Sprachvar
 
 **Eingaben:** `main`-Commit, Zielland-Commit, betroffene technische Dateien, regionale Prüfstände.
 
-**Schritte:** `git diff main...country/DE -- assets tools .github` und PR-Diff prüfen. Technischen Commit gezielt per `git cherry-pick <SHA>` übernehmen oder betroffene **technische Dateien** abgleichen. Regionale Dateien unter `content/`, `guides/`, `SOURCES.md`, `STARTERGUIDE.md` nicht pauschal überschreiben. `python tools/build.py`, `python tools/package.py`, `python tools/verify.py`, `python tests/check_offline.py` und `node tests/search.js` im Zielland laufen lassen.
+**Schritte:** `git diff main...country/DE -- assets tools` und PR-Diff prüfen. Technische Dateien auf `main` liegen unter `assets/` und `tools/`, im Länderbranch unter `Infrastruktur/assets/` und `Infrastruktur/tools/` beziehungsweise `Infrastructure/assets/` und `Infrastructure/tools/`. Daher gezielt einzelne Dateien oder Änderungen übertragen; ein pauschaler Cherry-Pick mit Pfadverschiebung ist ungeeignet. Regionale `content/`, `guides/`, Quellen, PDF/TXT und nutzerseitige Ordner nie pauschal überschreiben. Danach `python <Infrastruktur>/tools/build.py`, `python <Infrastruktur>/tools/make_readme_pdf.py`, `python <Infrastruktur>/tools/package.py`, `python <Infrastruktur>/tools/verify.py` und vorhandene Tests im Zielland ausführen.
 
 **Prüfkriterien:** technische Funktion gleich, regionale Aussagen unverändert oder erneut fachlich geprüft; generierte Dateien synchron; Tests und Hashes aktualisiert.
 
@@ -66,7 +68,7 @@ Jeder Lauf erhält einen öffentlichen Prüfvermerk mit **Datum, Land, Sprachvar
 
 **Eingaben:** freigegebener Länder-Commit, Quellen- und Sicherheitsvermerke, Geräte-Testmatrix.
 
-**Schritte:** Bauen (`python tools/build.py`), Paket erstellen (`python tools/package.py`), automatisierte Checks und Browser-/Gerätetest durchführen. `MANIFEST.sha256` und ZIP-SHA-256 protokollieren. Vor Veröffentlichung ZIP in leerem Ordner entpacken und `START.html`, Suche, Textdateien, Medienordner und Rückkopieren prüfen. Tag `DE-YYYY.MM.DD-rN` setzen und das ZIP als Release-Asset bereitstellen; README-Downloadlink prüfen.
+**Schritte:** HTML, PDF/TXT und ZIP mit den Werkzeugen im Länder-Infrastrukturordner bauen. Automatisierte Checks und Browser-/Gerätetest durchführen. `Infrastruktur/PRUEFSUMMEN.sha256` oder `Infrastructure/CHECKSUMS.sha256` und ZIP-SHA-256 protokollieren. ZIP in leerem Ordner entpacken und `START.html`, Suche, PDF/TXT, lokalisierte Ordner, Medienergänzung und Rückkopieren prüfen. Tag `<LAND>-YYYY.MM.DD-rN` setzen, ZIP auf `main/releases/` veröffentlichen und den direkten README-Downloadlink prüfen.
 
 **Prüfkriterien:** keine unerlaubten Drittinhalte, sichtbare Quellen- und Prüfstände, funktionierende lokale Links, responsive Ansicht, dokumentierte nicht durchführbare Tests. Fachlich geeignete menschliche Prüfung für Medizin, Sicherheit und regionales Recht liegt vor.
 
