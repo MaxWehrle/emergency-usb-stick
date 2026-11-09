@@ -1,21 +1,16 @@
-# Notfall-Stick für Deutschland
+# Notfall-Stick · Deutschland (de-DE)
 
-**Sie haben das Paket schon geöffnet.** Diese Dateien können Sie auf einen USB-Stick kopieren. Der Stick ist ein kleiner tragbarer Speicher. Er funktioniert auch ohne Internet.
+Dieses Paket enthält kurze Hinweise für verschiedene Notlagen. [START.html](START.html) funktioniert ohne Internet und Installation. Alle Hinweise finden Sie zusätzlich als normale Dateien im Ordner [guides](guides/).
 
-## Jetzt lesen
+## Das Paket nutzen
 
-1. Öffnen Sie [START.html](START.html). Das ist die Startseite mit den Notfall-Themen.
-2. Wenn Sie einen **PC mit Windows** haben: Klicken Sie zweimal schnell auf `START.html`. Das nennt man Doppelklick.
-3. Wenn Sie ein **Android-Handy** haben: Öffnen Sie die App **Dateien** oder **Dateimanager**. Tippen Sie auf den USB-Stick und dann auf `START.html`. Wählen Sie einen Browser, falls das Handy danach fragt.
+1. Öffnen Sie `START.html` auf dem USB-Stick. Unter Windows per Doppelklick, unter Android über die App **Dateien** oder **Dateimanager**.
+2. Wählen Sie ein Thema oder suchen Sie nach einem Stichwort. Falls Ihr Handy lokale HTML-Dateien nicht öffnet, lesen Sie die Dateien im Ordner `guides` mit einer Text-App.
+3. Legen Sie eigene Fotos, Karten und unkritische Dokumente in `personal` ab. Für sensible Unterlagen lesen Sie zuerst [private/README.txt](private/README.txt).
+4. Prüfen Sie den Stick ohne Internet und kopieren Sie eine Testdatei auf Ihr Gerät zurück. Bewahren Sie eine zweite vollständige Kopie an einem anderen Ort auf.
 
-Wenn die Startseite nicht aufgeht: Öffnen Sie den Ordner [guides](guides/) und lesen Sie die passende Textdatei. Die Informationen sind auch dort gespeichert.
+Wie Sie das ZIP entpacken und den Stick vorbereiten, steht im [Starterguide für Windows und Android](STARTERGUIDE.md). Ein ZIP ist ein gepacktes Archiv; nach dem Entpacken können Sie die enthaltenen Dateien auf den Stick kopieren.
 
-## Ihren Stick vorbereiten
+[Quellen und Prüfdatum](SOURCES.md) · [Lizenz](LICENSE) · [Projekt-Startseite](https://github.com/MaxWehrle/emergency-usb-stick)
 
-Lesen Sie die [Anleitung mit ganz kleinen Schritten](STARTERGUIDE.md). Dort steht genau, wie Sie das ZIP entpacken, Dateien kopieren und den Stick testen. **ZIP** ist eine gepackte Datei. **Entpacken** heißt: Die Dateien daraus in einen normalen Ordner holen.
-
-Eigene Fotos, Karten und Dokumente gehören in den Ordner `personal`. Für geheime oder sehr persönliche Unterlagen lesen Sie zuerst [private/README.txt](private/README.txt). Legen Sie Passwörter nie auf den Stick.
-
-[Quellen und Prüfdatum](SOURCES.md) · [Lizenz](LICENSE)
-
-**Wichtig:** Bei akuter Gefahr die örtlichen Anweisungen beachten. Digitale Kopien ersetzen keine Originaldokumente.
+Bei akuter Gefahr beachten Sie aktuelle Warnungen und die Anweisungen vor Ort. Digitale Kopien ersetzen keine Originaldokumente.

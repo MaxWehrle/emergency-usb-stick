@@ -8,7 +8,7 @@ import shutil
 import subprocess
 
 root = Path(__file__).resolve().parents[1]
-zip_path = root / 'dist/DE-2026.11.09-r3.zip'
+zip_path = root / 'dist/DE-2026.11.09-r4.zip'
 assert zip_path.is_file(), 'Run python tools/package.py first'
 
 class Links(HTMLParser):

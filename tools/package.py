@@ -23,7 +23,7 @@ def canonical_bytes(rel):
 manifest = '\n'.join(f'{sha256(canonical_bytes(rel)).hexdigest()}  {rel}'
                      for rel in allowed if rel != 'MANIFEST.sha256') + '\n'
 (root / 'MANIFEST.sha256').write_bytes(manifest.encode('utf-8'))
-out = root / 'dist' / 'DE-2026.11.09-r3.zip'
+out = root / 'dist' / 'DE-2026.11.09-r4.zip'
 out.parent.mkdir(exist_ok=True)
 with ZipFile(out, 'w', ZIP_DEFLATED) as z:
     for rel in allowed:

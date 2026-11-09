@@ -2,7 +2,7 @@
 
 **Deutschland · einfache Anleitung · Stand 09.11.2026**
 
-Sie brauchen einen USB-Stick und einen Windows-PC **oder** ein Android-Handy. Ein USB-Stick ist ein kleiner Speicher, den man an ein Gerät steckt. Die Form des Steckers muss zur Buchse am Gerät passen:
+Sie brauchen einen USB-Stick und einen Windows-PC **oder** ein Android-Handy. Prüfen Sie vor dem Kauf, welcher Anschluss zu Ihren Geräten passt:
 
 ![USB-A ist breit und eckig, USB-C ist klein und oval.](assets/stecker.svg)
 
@@ -10,19 +10,19 @@ Sie brauchen einen USB-Stick und einen Windows-PC **oder** ein Android-Handy. Ei
 
 ## 1. Das Paket herunterladen
 
-Öffnen Sie die [Projekt-Startseite](https://github.com/MaxWehrle/emergency-usb-stick) und klicken oder tippen Sie auf **„Deutsches Paket als ZIP herunterladen“**. Warten Sie, bis der Download fertig ist. Die Datei heißt ungefähr `DE-2026.11.09-r3.zip` (die Zahl am Ende kann bei einer neuen Ausgabe anders sein).
+Öffnen Sie die [Projekt-Startseite](https://github.com/MaxWehrle/emergency-usb-stick) und wählen Sie **„Deutsches Paket herunterladen“**. Die Datei heißt `DE-2026.11.09-r4.zip` (bei einer neueren Ausgabe kann die Zahl anders sein).
 
-**ZIP** bedeutet: Viele Dateien stecken in einer gepackten Datei. Sie müssen die ZIP-Datei zuerst **entpacken**. Das heißt, die Dateien daraus in einen normalen Ordner holen. Kopieren Sie nicht nur die ZIP-Datei auf den Stick.
+Ein **ZIP** ist ein gepacktes Archiv. **Entpacken** legt seinen Inhalt als normale Dateien in einem Ordner ab. Kopieren Sie anschließend den Inhalt dieses Ordners auf den Stick.
 
 ## 2A. Mit einem Windows-PC entpacken und kopieren
 
-1. Öffnen Sie den **Datei-Explorer**. Das Symbol sieht wie ein gelber Ordner aus.
+1. Öffnen Sie den **Datei-Explorer**.
 2. Öffnen Sie links **Downloads**. Suchen Sie die Datei, die mit `DE-` beginnt und mit `.zip` endet.
 3. Klicken Sie mit der **rechten Maustaste** auf die ZIP-Datei. Wählen Sie **Alle extrahieren** oder **Alles extrahieren**. Klicken Sie dann auf **Extrahieren**. Windows öffnet einen neuen, normalen Ordner.
-4. Öffnen Sie diesen Ordner. Sie sollten `START.html` und Ordner wie `guides` und `personal` sehen. Falls Sie zuerst noch einen einzigen Ordner sehen, öffnen Sie auch ihn.
-5. Stecken Sie den USB-Stick in den PC. Öffnen Sie im Datei-Explorer links **Dieser PC** und dann den USB-Stick. Er kann auch einen anderen Namen haben, zum Beispiel „USB-Laufwerk“.
-6. Wechseln Sie zurück zum entpackten Ordner. Drücken Sie **Strg + A**, um alles darin zu markieren. Drücken Sie **Strg + C**, um es zu kopieren.
-7. Wechseln Sie zum geöffneten USB-Stick. Drücken Sie **Strg + V**, um alles einzufügen. Warten Sie, bis das Kopieren fertig ist. **Auf dem Stick muss `START.html` direkt sichtbar sein.**
+4. Öffnen Sie den entpackten Ordner. Dort sollten `START.html`, `guides` und `personal` liegen. Falls Sie zunächst nur einen weiteren Ordner sehen, öffnen Sie ihn.
+5. Stecken Sie den USB-Stick in den PC. Öffnen Sie im Datei-Explorer **Dieser PC** und dann den USB-Stick.
+6. Wechseln Sie zurück zum entpackten Ordner. Markieren Sie mit **Strg + A** alles darin und kopieren Sie es mit **Strg + C**.
+7. Wechseln Sie zum USB-Stick und fügen Sie alles mit **Strg + V** ein. Warten Sie, bis das Kopieren abgeschlossen ist. **`START.html` muss direkt auf dem Stick liegen.**
 
 Wenn auf dem Stick schon eigene Dateien sind oder Windows fragt, ob Dateien ersetzt werden sollen: Stoppen Sie und prüfen Sie zuerst, was dort liegt. **Formatieren** löscht den Inhalt des Sticks; für diese Anleitung ist das nicht nötig.
 
