@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de-DE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notfall-Stick | Deutschland</title><style>:root{color-scheme:light;--ink:#17333d;--muted:#405b62;--line:#b8cbd0;--paper:#f6f8f6;--white:#fff;--accent:#075d62;--focus:#f8a83c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{width:min(100% - 32px,1020px);margin-inline:auto}
+a{color:#075a65;text-decoration-thickness:1.5px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:6px;background:#fff;padding:8px;z-index:3}
+.skip:focus{left:8px}
+.top{background:#143f49;color:#fff}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
+.brand{font-size:1rem;font-weight:800;letter-spacing:.02em}
+.edition{font-size:.83rem;color:#e6f2ef;text-align:right}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin-bottom:10px}
+h2{font-size:clamp(1.45rem,3vw,1.9rem);line-height:1.2;margin-bottom:17px}
+h3{font-size:1.15rem;line-height:1.3}
+p{margin-bottom:13px}
+.intro{background:#e9f1ee;padding:30px 0 28px}
+.eyebrow{color:#0b5c60;font-size:.78rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
+.lead{max-width:75ch;font-size:1.05rem}
+.emergency{background:#fff5e9;border:2px solid #a65719;border-left-width:7px;border-radius:10px;padding:16px 18px;margin:22px 0 13px}
+.emergency strong{display:block;font-size:1.15rem;margin-bottom:4px}
+.emergency p{margin:0 0 5px}
+.emergency small{color:#5c4634;font-size:.75rem}
+.offline-note{font-weight:650;margin:0 0 21px}
+.search-block{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;margin:0 0 17px}
+.search-block label{display:block;font-weight:750;margin-bottom:6px}
+.search-row{display:flex;gap:9px}
+.search-row input{min-width:0;flex:1;font:inherit;border:2px solid #6f9398;border-radius:8px;padding:11px 13px;min-height:48px}
+.search-row button{font:inherit;font-weight:700;color:#fff;background:var(--accent);border:0;border-radius:8px;padding:9px 17px;min-height:48px;cursor:pointer}
+#count{font-size:.87rem;color:var(--muted);margin:7px 0 0;min-height:1.4em}
+.quick-links,.folder-links{display:flex;flex-wrap:wrap;gap:10px}
+.quick-links a,.folder-link{display:inline-flex;align-items:center;min-height:44px;background:#fff;border:1px solid #9cb7ba;border-radius:8px;padding:8px 13px;font-weight:650}
+.topics{padding:28px 0 42px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card[hidden]{display:none}
+.card summary{display:flex;flex-direction:column;gap:5px;list-style:none;cursor:pointer;padding:18px 20px;min-height:124px}
+.card summary::-webkit-details-marker{display:none}
+.card summary:hover{background:#f2f7f5}
+.card-heading{display:block;font-size:1.23rem;font-weight:800;line-height:1.25}
+.card-summary{display:block;color:var(--muted);font-size:.95rem}
+.card-open{display:block;color:var(--accent);font-weight:750;font-size:.93rem;margin-top:auto;padding-top:9px}
+.card-open .hide{display:none}
+.card[open] .card-open .show{display:none}
+.card[open] .card-open .hide{display:inline}
+.card[open] .card-open [aria-hidden]{display:inline-block;transform:rotate(180deg)}
+.card-body{border-top:1px solid var(--line);padding:16px 20px 20px}
+.card-tag{font-size:.82rem;color:var(--muted);margin:0 0 9px}
+.card ol{padding-left:1.4em;margin:0 0 13px}
+.card li{padding-left:3px;margin-bottom:10px}
+.card-foot{display:flex;flex-wrap:wrap;gap:9px 16px;border-top:1px solid var(--line);padding-top:12px;margin:0;font-size:.82rem;color:var(--muted)}
+.card-foot a{font-weight:700}
+.section{padding:32px 0}
+.section p{max-width:78ch}
+.private-link{margin:16px 0 24px}
+.indexed{display:flex;flex-wrap:wrap;gap:9px;overflow-wrap:anywhere}
+.indexed a{background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 11px}
+.muted,.small{color:var(--muted);font-size:.86rem}
+.sources{background:#e9f1ee}
+footer{background:#143f49;color:#fff;padding:23px 0;font-size:.85rem}
+footer a{color:#fff}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.intro{padding-top:23px}.card summary{min-height:0}}
+@media(max-width:400px){body{font-size:17px}.wrap{width:min(100% - 24px,1020px)}.top .wrap{align-items:flex-start;flex-direction:column}.edition{text-align:left}.search-row{flex-direction:column}.search-row button{align-self:flex-start}.quick-links a{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.top,.search-block,.quick-links,footer{display:none}.grid{display:block}.card{break-inside:avoid;margin-bottom:10px}.card-body{display:block!important}}
+</style></head><body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="top"><div class="wrap"><div class="brand">NOTFALL-STICK</div><div class="edition">Deutschland · de-DE · offline</div></div></header>
+<main id="main">
+<section class="intro"><div class="wrap"><p class="eyebrow">Kurze Hinweise für Notlagen</p><h1>Was brauchen Sie jetzt?</h1>
+<p class="lead">Wählen Sie ein Thema oder suchen Sie nach einem Wort. Alle Hinweise sind auch als Textdateien auf dem Stick gespeichert.</p>
+<div class="emergency"><strong>Unmittelbare Gefahr?</strong><p>Bei Feuer oder medizinischem Notfall in Deutschland: 112. Bei einem Polizeinotfall: 110. Nennen Sie Ihren Standort und folgen Sie den Anweisungen am Telefon.</p><small>Notrufangaben: Quellenverzeichnis · geprüft 09.11.2026</small></div>
+<p class="offline-note">Dieser Stick zeigt keine aktuellen Warnungen. Prüfen Sie amtliche Meldungen, sobald das möglich ist. Anweisungen vor Ort haben Vorrang.</p>
+<div class="search-block"><label for="search">Thema suchen</label><div class="search-row"><input id="search" type="search" autocomplete="off" placeholder="Zum Beispiel: Wasser, Strom, Hitze"><button id="clear-search" type="button">Löschen</button></div><p id="count" role="status" aria-live="polite" data-available="{total} Themen verfügbar." data-found="{shown} von {total} Themen gefunden."></p></div>
+<nav class="quick-links" aria-label="Weitere Wege"><a href="00-LIESMICH-DE.pdf">Anleitung als PDF</a><a href="00-LIESMICH-DE.txt">Anleitung als Text</a><a href="#personal">Eigene Dateien</a></nav>
+</div></section>
+<section class="topics" aria-labelledby="topics-title"><div class="wrap"><h2 id="topics-title">Themen und nächste Schritte</h2><div class="grid"><details class="card" data-card><summary><span class="card-heading">Stromausfall</span><span class="card-summary">Licht, Heizung, Wasser, Telefon und Einkauf können gleichzeitig betroffen sein.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Prüfen Sie zuerst, ob nur Ihr Haushalt betroffen ist. Gehen Sie bei beschädigten Leitungen oder elektrischen Anlagen auf Abstand.</li><li>Nutzen Sie Taschenlampe, geladene Powerbank und ein Batterie- oder Kurbelradio. Hören Sie auf lokale Hinweise.</li><li>Halten Sie warme Kleidung bereit. Nutzen Sie Grill oder Campingkocher niemals in Wohnräumen: Gefahr durch Kohlenmonoxid und Sauerstoffmangel.</li><li>Schonen Sie Handy-Akku und prüfen Sie verderbliche Lebensmittel nach der Unterbrechung sorgfältig.</li></ol><p class="card-foot"><a href="guides/stromausfall.md">Als Textdatei öffnen</a><span>Quellen: BBK-POWER, BBK-INFO</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Evakuierung</span><span class="card-summary">Bei einer behördlichen Aufforderung zügig und nach den örtlichen Anweisungen handeln.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Befolgen Sie die Anweisungen der Einsatzkräfte; Route und Sammelstelle können sich ändern.</li><li>Nehmen Sie notwendige Medikamente, Ausweis und griffbereite Dokumentenmappe, Handy, Ladegerät, Wasser und passende Kleidung mit, soweit ohne Verzögerung möglich.</li><li>Informieren Sie Mitbewohnende und unterstützen Sie Menschen mit Hilfebedarf, ohne sich selbst zu gefährden.</li><li>Kehren Sie erst zurück, wenn die zuständige Stelle es freigibt.</li></ol><p class="card-foot"><a href="guides/evakuierung.md">Als Textdatei öffnen</a><span>Quellen: BBK-GUIDE, BBK-DOCS, BBK-WARN</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Wasser und Hygiene</span><span class="card-summary">Bei Ausfall oder Warnung die Hinweise des örtlichen Versorgers und Gesundheitsamts beachten.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Nutzen Sie vorhandenes sicheres Trinkwasser sparsam. Halten Sie einen persönlichen Vorrat bereit; Bedarf hängt von Personen, Gesundheit und Dauer ab.</li><li>Bei einer amtlichen Abkoch- oder Nichttrinken-Anordnung gelten genau deren Vorgaben. Unbekanntes Wasser nicht allein durch Aussehen beurteilen.</li><li>Planen Sie Handhygiene und Toilettennutzung bei fehlendem Leitungswasser. Seife, Feuchttücher, Müllbeutel und Hygieneartikel helfen.</li><li>Fragen Sie bei besonderem medizinischem Bedarf frühzeitig nach örtlicher Hilfe.</li></ol><p class="card-foot"><a href="guides/wasser-hygiene.md">Als Textdatei öffnen</a><span>Quellen: BBK-WATER, BBK-HYGIENE, BMG-WATER</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Hitze</span><span class="card-summary">Belastung reduzieren, kühle Orte suchen und gefährdete Menschen im Blick behalten.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Meiden Sie direkte Sonne und größere Anstrengung in den heißesten Stunden.</li><li>Trinken Sie regelmäßig; bei medizinischen Trinkbeschränkungen ärztliche Vorgaben beachten. Tragen Sie leichte Kleidung.</li><li>Lüften Sie, wenn es draußen kühler ist, und verschatten Sie Räume.</li><li>Bei Verwirrtheit, Bewusstseinsstörung oder schwerer Verschlechterung Hilfe holen; im Notfall 112.</li></ol><p class="card-foot"><a href="guides/hitze.md">Als Textdatei öffnen</a><span>Quellen: DWD-HEAT, BBK-112</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Kälte und Heizungsausfall</span><span class="card-summary">Wärme halten und gefährliche Ersatzheizungen vermeiden.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Tragen Sie mehrere Kleidungsschichten und nutzen Sie Decken. Halten Sie sich möglichst in einem Raum auf.</li><li>Achten Sie auf Menschen, die sich nicht selbst warmhalten können, und bieten Sie Hilfe an.</li><li>Betreiben Sie Holzkohlegrills, Campingkocher und ungeeignete Heizgeräte niemals drinnen. Sorgen Sie bei zugelassenen Wärmequellen für die vorgeschriebene Lüftung.</li><li>Bei Unterkühlungsverdacht oder akuter gesundheitlicher Verschlechterung medizinische Hilfe rufen.</li></ol><p class="card-foot"><a href="guides/kaelte.md">Als Textdatei öffnen</a><span>Quellen: BBK-POWER, BBK-GUIDE</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Hochwasser</span><span class="card-summary">Wasserwege und Keller meiden; amtliche Pegel- und Ortswarnungen beachten.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Verfolgen Sie örtliche Warnungen und verlassen Sie gefährdete Uferbereiche frühzeitig.</li><li>Gehen Sie nicht in überflutete Keller oder Tiefgaragen und fahren Sie nicht durch überflutete Straßen.</li><li>Schalten Sie Strom nur ab, wenn das gefahrlos möglich ist; Wasser und elektrische Anlagen sind eine gefährliche Kombination.</li><li>Halten Sie Notgepäck und wichtige Dokumente bereit. Befolgen Sie Absperrungen und Evakuierungsanweisungen.</li></ol><p class="card-foot"><a href="guides/hochwasser.md">Als Textdatei öffnen</a><span>Quellen: BBK-FLOOD, BBK-WARN</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Kommunikation und Warnungen</span><span class="card-summary">Bei Netzausfall mehrere Informationswege nutzen.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Prüfen Sie amtliche Warnungen, wenn Internet und Mobilfunk verfügbar sind. NINA zeigt behördliche Meldungen, ersetzt aber kein Offline-Radio.</li><li>Halten Sie eine gedruckte Kontaktliste und ein Batterie- oder Kurbelradio bereit.</li><li>Schonen Sie Akkus und vereinbaren Sie mit Angehörigen einen Treffpunkt und einen einfachen Kontaktplan.</li><li>Wenn 110 und 112 nicht erreichbar sind, beachten Sie örtliche Notfalltreffpunkte; laut BBK kann bei einem Notfall eine Polizeiwache oder ein Krankenhaus aufgesucht werden, sofern möglich.</li></ol><p class="card-foot"><a href="guides/kommunikation.md">Als Textdatei öffnen</a><span>Quellen: BBK-INFO, BBK-NINA, BNA-NOTRUF</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Gesundheit und Erste Hilfe</span><span class="card-summary">Eigenschutz, Notruf und geübte Erste Hilfe sind entscheidend.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Achten Sie zuerst auf Ihre eigene Sicherheit und sichern Sie die Stelle, soweit möglich.</li><li>Bei einem medizinischen Notfall 112 wählen. Nennen Sie Ort und Geschehen und warten Sie auf Rückfragen.</li><li>Leisten Sie Erste Hilfe nach Ihrem Kenntnisstand, bis Hilfe eintrifft. Halten Sie notwendige persönliche Medikamente und Informationen griffbereit.</li><li>Frischen Sie einen Erste-Hilfe-Kurs regelmäßig auf; eine Kurzkarte ersetzt keine praktische Ausbildung.</li></ol><p class="card-foot"><a href="guides/gesundheit.md">Als Textdatei öffnen</a><span>Quellen: BBK-112, BBK-GUIDE</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Dokumente und Nachweise</span><span class="card-summary">Wichtige Unterlagen griffbereit und mit getrennten Sicherungskopien aufbewahren.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Sammeln Sie für Ihren Haushalt relevante Urkunden, Ausweise, Versicherungs- und Gesundheitsnachweise in einer Dokumentenmappe.</li><li>Erstellen Sie digitale Kopien und legen Sie sensible Dateien in einen verschlüsselten Tresor gemäß private/README.txt.</li><li>Bewahren Sie Originale geschützt auf. Klären Sie bei der ausstellenden Stelle, wann Original oder beglaubigte Kopie erforderlich ist.</li><li>Prüfen Sie regelmäßig, ob Kopien lesbar sind und ob Sie den Tresor ohne Netz wieder öffnen können.</li></ol><p class="card-foot"><a href="guides/dokumente.md">Als Textdatei öffnen</a><span>Quellen: BBK-DOCS, CRYPTO-RECOVERY</span></p></div></details><details class="card" data-card><summary><span class="card-heading">Vorrat und Vorbereitung</span><span class="card-summary">Eine kleine, tatsächlich nutzbare Vorbereitung ist ein guter Anfang.</span><span class="card-open"><span class="show">Schritte ansehen</span><span class="hide">Schließen</span> <span aria-hidden="true">⌄</span></span></summary><div class="card-body"><p class="card-tag">Grundlage · geprüft 2026-11-09</p><ol><li>Planen Sie Wasser, haltbare Lebensmittel, Licht, Batterien, Radio und benötigte Medikamente nach den Bedürfnissen Ihres Haushalts.</li><li>Das BBK empfiehlt möglichst zehn Tage Selbstversorgung; auch ein Vorrat für mindestens drei Tage hilft als Einstieg.</li><li>Ergänzen Sie einen persönlichen Kontakt- und Treffpunktplan sowie Notgepäck für eine rasche Evakuierung.</li><li>Kontrollieren Sie Haltbarkeit, Geräte und Datensicherungen regelmäßig.</li></ol><p class="card-foot"><a href="guides/vorsorge.md">Als Textdatei öffnen</a><span>Quellen: BBK-GUIDE, BBK-PROVISIONS</span></p></div></details></div></div></section>
+<section class="section" id="personal"><div class="wrap"><h2>Ihre Dateien</h2><p>Eigene Fotos, Karten und Dokumente kommen in diese Ordner. Öffnen Sie sie auch direkt im Dateimanager.</p><div class="folder-links"><a class="folder-link" href="personal/Fotos/README.txt">Fotos</a><a class="folder-link" href="personal/Karten/README.txt">Karten</a><a class="folder-link" href="personal/Dokumente/README.txt">Dokumente</a><a class="folder-link" href="personal/Mein-Ort/README.txt">Mein Ort</a></div><p class="private-link"><a href="private/README.txt">Vertrauliche Dateien: erst Verschlüsselungsanleitung lesen</a></p><h3>Direkt verlinkte eigene Dateien</h3><div class="indexed"><!-- PERSONAL-INDEX-START --><p class="muted">Noch keine eigenen Dateien verlinkt. Öffnen Sie die Ordner direkt.</p><!-- PERSONAL-INDEX-END --></div><p class="small">Die Ordner funktionieren ohne zusätzliche Software. Ein optionales Programm zum Aktualisieren dieser Links liegt im Infrastrukturordner.</p></div></section>
+<section class="section sources"><div class="wrap"><h2>Quellen und Stand</h2><p>Die Hinweise beruhen auf den dokumentierten Quellen. Angaben zu Warnungen und örtlichen Regeln können sich ändern.</p><a href="SOURCES.md">Quellenverzeichnis öffnen</a></div></section>
+</main><footer><div class="wrap">Notfall-Stick · Deutschland · Stand 09.11.2026 · <a href="LICENSE">MIT</a></div></footer><script>(() => {
+  const input = document.getElementById('search');
+  const clear = document.getElementById('clear-search');
+  const count = document.getElementById('count');
+  const cards = [...document.querySelectorAll('[data-card]')];
+  if (!input || !count) return;
+  const locale = document.documentElement.lang || 'en-US';
+  const normal = value => value.toLocaleLowerCase(locale).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  function update() {
+    const query = normal(input.value.trim());
+    let shown = 0;
+    cards.forEach(card => {
+      card.hidden = !!query && !normal(card.textContent).includes(query);
+      if (!card.hidden) shown++;
+    });
+    const template = query ? count.dataset.found : count.dataset.available;
+    count.textContent = template.replace('{shown}', shown).replace('{total}', cards.length);
+  }
+  input.addEventListener('input', update);
+  if (clear) clear.addEventListener('click', () => { input.value = ''; update(); input.focus(); });
+  update();
+})();
+</script></body></html>

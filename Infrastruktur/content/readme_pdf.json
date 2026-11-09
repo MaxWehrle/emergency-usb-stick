@@ -1,0 +1,69 @@
+{
+  "locale": "de-DE",
+  "filename": "00-LIESMICH-DE.pdf",
+  "txt_filename": "00-LIESMICH-DE.txt",
+  "eyebrow": "DEUTSCHLAND · OFFLINE NUTZBAR",
+  "title": "Ihr Notfall-Stick",
+  "subtitle": "Eine kurze Anleitung für Windows und Android · Stand 09.11.2026",
+  "lead": "Dieses Paket enthält kurze Hinweise für Notlagen. Sie können es ohne Internet öffnen. Für aktuelle Warnungen gelten die Anweisungen der örtlichen Behörden.",
+  "steps_title": "In fünf Schritten zum fertigen Stick",
+  "steps": [
+    {"title": "Paket entpacken", "text": "Laden Sie die deutsche ZIP-Datei herunter. Öffnen Sie sie in Downloads und wählen Sie Entpacken bzw. Alle extrahieren."},
+    {"title": "Alles auf den Stick kopieren", "text": "Kopieren Sie den gesamten Inhalt des entpackten Ordners. START.html und diese PDF sollen direkt auf dem USB-Stick liegen."},
+    {"title": "Startseite öffnen", "text": "Öffnen Sie START.html auf dem Stick. Unter Android geht das über die Dateien-App. Falls es nicht klappt, öffnen Sie Anleitungen und lesen Sie eine .txt-Datei."},
+    {"title": "Eigene Dateien ergänzen", "text": "In Eigene-Dateien finden Sie Platz für Fotos, Karten, Dokumente und Angaben zu Ihrem Ort. Sensible Unterlagen gehören nur in einen zuvor getesteten verschlüsselten Tresor."},
+    {"title": "Offline testen und zweite Kopie anlegen", "text": "Schalten Sie für den Test das Internet aus. Öffnen Sie einen Hinweis und kopieren Sie eine eigene Testdatei zurück auf Ihr Gerät. Legen Sie eine zweite vollständige Kopie an einem anderen Ort ab."}
+  ],
+  "first_page_note": "Wichtig: Eine ZIP-Datei allein auf dem Stick reicht nicht. Kopieren Sie die Dateien <b>aus dem entpackten Ordner</b>. Wenn Sie bei einem Schritt unsicher sind, gehen Sie diese Anleitung in Ruhe noch einmal durch oder testen Sie ihn mit einer vertrauten Person.",
+  "folders_title": "Was liegt wo?",
+  "folders_intro": "Die Namen auf dem Stick beschreiben ihren Zweck. Sie können jeden Ordner direkt in der Dateien-App oder im Datei-Explorer öffnen.",
+  "folders": [
+    {"name": "START.html", "description": "Startseite mit Suche und kurzen Lagekarten."},
+    {"name": "Anleitungen", "description": "Dieselben Hinweise als normale .txt-Dateien. Diese funktionieren auch, wenn die Startseite auf Ihrem Handy nicht öffnet."},
+    {"name": "Eigene-Dateien", "description": "Ihre Ordner für Fotos, Karten, Dokumente und Mein-Ort. Sie sind zu Beginn leer; HINWEIS.txt erklärt jeden Ordner."},
+    {"name": "Vertrauliche-Dateien", "description": "Anleitung zum Verschlüsseln sensibler Unterlagen. Ein Tresor und Passwörter sind nicht enthalten."},
+    {"name": "Infrastruktur", "description": "Quellen, Lizenz, ausführliche Projektunterlagen und Code. Für die normale Nutzung müssen Sie diesen Ordner nicht öffnen."}
+  ],
+  "help_title": "Wenn etwas nicht öffnet",
+  "help": "Öffnen Sie den USB-Stick im Datei-Explorer oder in der Dateien-App. Wählen Sie im Ordner Anleitungen die passende .txt-Datei. Testen Sie das Öffnen auf Ihren eigenen Geräten, bevor Sie den Stick brauchen.",
+  "privacy": "Persönliche Fotos und Dokumente gehören nicht in das öffentliche GitHub-Repository. Vertrauliche Unterlagen nur nach einem erfolgreichen Verschlüsselungs- und Wiederherstellungstest ergänzen.",
+  "safety": "Digitale Kopien ersetzen keine Originaldokumente. Aktuelle Warnungen und Anweisungen vor Ort haben Vorrang vor diesem Offline-Paket.",
+  "device_title": "So kopieren Sie das Paket",
+  "device_intro": "Die folgenden Schritte sind für zwei Wege gedacht. Wählen Sie nur den Abschnitt für Ihr Gerät.",
+  "device_sections": [
+    {"title": "Mit einem Windows-PC", "steps": [
+      "Öffnen Sie Downloads im Datei-Explorer. Klicken Sie mit der rechten Maustaste auf die heruntergeladene ZIP-Datei und wählen Sie Alle extrahieren.",
+      "Öffnen Sie den entpackten Ordner. Darin müssen START.html, 00-LIESMICH-DE.pdf und die Ordner Anleitungen und Eigene-Dateien zu sehen sein.",
+      "Stecken Sie den USB-Stick ein und öffnen Sie ihn im Datei-Explorer unter Dieser PC. Wenn bereits Dateien darauf liegen, prüfen Sie diese vor dem Kopieren.",
+      "Markieren Sie alles im entpackten Ordner mit Strg + A und kopieren Sie es mit Strg + C. Wechseln Sie zum Stick und fügen Sie es mit Strg + V ein.",
+      "Warten Sie, bis das Kopieren fertig ist. Öffnen Sie START.html direkt vom Stick und prüfen Sie einen Hinweis im Ordner Anleitungen."
+    ]},
+    {"title": "Nur mit einem Android-Handy", "steps": [
+      "Öffnen Sie Downloads in Ihrer Dateien-App. Tippen Sie auf die ZIP-Datei und wählen Sie Entpacken oder Extrahieren.",
+      "Verbinden Sie einen passenden USB-Stick oder Adapter. Öffnen Sie USB-Speicher in der Dateien-App.",
+      "Markieren Sie alle Dateien und Ordner im entpackten Ordner. Wählen Sie Kopieren und dann den USB-Speicher als Ziel.",
+      "Öffnen Sie START.html auf dem Stick. Falls Ihr Handy lokale HTML-Dateien nicht öffnet, lesen Sie die .txt-Dateien im Ordner Anleitungen."
+    ]}
+  ],
+  "care_title": "Eigene Dateien und Pflege",
+  "care_intro": "Der Stick ist erst dann hilfreich, wenn Sie die für Ihren Haushalt wichtigen Dateien ergänzt und die Wiederherstellung ausprobiert haben.",
+  "care_sections": [
+    {"title": "Was Sie ergänzen können", "items": [
+      "Fotos: eigene Bilder. Karten: rechtmäßig gespeicherte Offline-Karten. Dokumente: eigene, nicht vertrauliche Dateien. Mein-Ort: eine persönliche Kopie der leeren Vorlage mit überprüften örtlichen Angaben.",
+      "Eine Kontaktliste, Ladegerät, passender Adapter und eine Taschenlampe können ebenfalls nützlich sein. Digitale Dokumentkopien ersetzen keine Originale."
+    ]},
+    {"title": "Vertrauliche Dateien", "items": [
+      "Ausweise, Gesundheitsdaten und andere sensible Angaben gehören nur in einen verschlüsselten Tresor, den Sie vorher unter Windows und Android tatsächlich geöffnet und getestet haben. Die Anleitung liegt in Vertrauliche-Dateien/HINWEIS.txt.",
+      "Bewahren Sie Passwort und Wiederherstellungsschlüssel getrennt vom Stick auf. Im öffentlichen Paket sind keine persönlichen Daten, Passwörter oder Schlüssel."
+    ]},
+    {"title": "Wie viel Speicher?", "items": [
+      "Prüfen Sie die Größe Ihrer eigenen Dateien und rechnen Sie etwa ein Drittel Reserve hinzu. Für 5 GB eigene Dateien sind 16-32 GB eine einfache Orientierung; für 35 GB etwa 64 GB, für 140 GB etwa 256 GB. Die nutzbare Kapazität kann geringer sein.",
+      "Prüfen Sie vor dem Kauf, ob Anschluss und Adapter zu Ihren Geräten passen. Ein passender Stecker allein garantiert nicht, dass Ihr Handy den Stick lesen kann."
+    ]},
+    {"title": "Zwei Kopien und Wiederherstellung", "items": [
+      "Legen Sie eine zweite vollständige Kopie an einem anderen Ort ab. Prüfen Sie beide nach Änderungen und regelmäßig, zum Beispiel alle drei Monate.",
+      "Kopieren Sie eine harmlose Testdatei vom Stick zurück auf Ihr Gerät und öffnen Sie die zurückkopierte Datei. Erst dann wissen Sie, dass dieser Weg auf Ihrem Gerät funktioniert."
+    ]}
+  ],
+  "footer": "Emergency USB Stick · Deutschland · de-DE"
+}

@@ -1,0 +1,23 @@
+{
+  "locale": "de-DE",
+  "title": "Notfall-Stick | Deutschland",
+  "skip": "Zum Inhalt springen",
+  "brand": "NOTFALL-STICK",
+  "edition": "Deutschland · de-DE · offline",
+  "eyebrow": "Kurze Hinweise für Notlagen",
+  "headline": "Was brauchen Sie jetzt?",
+  "lead": "Wählen Sie ein Thema oder suchen Sie nach einem Wort. Alle Hinweise sind auch als Textdateien auf dem Stick gespeichert.",
+  "emergency": {"title": "Unmittelbare Gefahr?", "text": "Bei Feuer oder medizinischem Notfall in Deutschland: 112. Bei einem Polizeinotfall: 110. Nennen Sie Ihren Standort und folgen Sie den Anweisungen am Telefon.", "source": "Notrufangaben: Quellenverzeichnis · geprüft 09.11.2026"},
+  "offline_note": "Dieser Stick zeigt keine aktuellen Warnungen. Prüfen Sie amtliche Meldungen, sobald das möglich ist. Anweisungen vor Ort haben Vorrang.",
+  "search": {"label": "Thema suchen", "placeholder": "Zum Beispiel: Wasser, Strom, Hitze", "clear": "Löschen", "available": "{total} Themen verfügbar.", "found": "{shown} von {total} Themen gefunden."},
+  "links": {"label": "Weitere Wege", "pdf": "Anleitung als PDF", "txt": "Anleitung als Text", "personal": "Eigene Dateien"},
+  "pdf": "00-LIESMICH-DE.pdf",
+  "txt": "00-LIESMICH-DE.txt",
+  "topics_title": "Themen und nächste Schritte",
+  "card": {"show": "Schritte ansehen", "hide": "Schließen", "time": "Aktuelle Lage vor Ort prüfen", "stable": "Grundlage", "reviewed": "geprüft", "file": "Als Textdatei öffnen", "sources": "Quellen"},
+  "personal": {"title": "Ihre Dateien", "lead": "Eigene Fotos, Karten und Dokumente kommen in diese Ordner. Öffnen Sie sie auch direkt im Dateimanager.", "private": "Vertrauliche Dateien: erst Verschlüsselungsanleitung lesen", "indexed": "Direkt verlinkte eigene Dateien", "empty": "Noch keine eigenen Dateien verlinkt. Öffnen Sie die Ordner direkt.", "rebuild": "Die Ordner funktionieren ohne zusätzliche Software. Ein optionales Programm zum Aktualisieren dieser Links liegt im Infrastrukturordner."},
+  "folders": [{"path": "Fotos", "label": "Fotos"}, {"path": "Karten", "label": "Karten"}, {"path": "Dokumente", "label": "Dokumente"}, {"path": "Mein-Ort", "label": "Mein Ort"}],
+  "sources": {"title": "Quellen und Stand", "lead": "Die Hinweise beruhen auf den dokumentierten Quellen. Angaben zu Warnungen und örtlichen Regeln können sich ändern.", "link": "Quellenverzeichnis öffnen"},
+  "guide": {"heading": "Was Sie tun können", "reviewed": "Geprüft", "sources": "Quellen", "details": "Originalquellen: ../SOURCES.md"},
+  "footer": "Notfall-Stick · Deutschland · Stand 09.11.2026"
+}

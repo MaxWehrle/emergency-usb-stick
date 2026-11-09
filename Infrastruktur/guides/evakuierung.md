@@ -1,0 +1,14 @@
+# Evakuierung
+
+Bei einer behördlichen Aufforderung zügig und nach den örtlichen Anweisungen handeln.
+
+## Was Sie tun können
+
+1. Befolgen Sie die Anweisungen der Einsatzkräfte; Route und Sammelstelle können sich ändern.
+2. Nehmen Sie notwendige Medikamente, Ausweis und griffbereite Dokumentenmappe, Handy, Ladegerät, Wasser und passende Kleidung mit, soweit ohne Verzögerung möglich.
+3. Informieren Sie Mitbewohnende und unterstützen Sie Menschen mit Hilfebedarf, ohne sich selbst zu gefährden.
+4. Kehren Sie erst zurück, wenn die zuständige Stelle es freigibt.
+
+Geprüft: 2026-11-09
+Quellen: BBK-GUIDE, BBK-DOCS, BBK-WARN
+Originalquellen: ../SOURCES.md

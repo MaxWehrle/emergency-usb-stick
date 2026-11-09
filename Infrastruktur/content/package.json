@@ -1,0 +1,23 @@
+{
+  "release": "DE-2026.11.09-r5.zip",
+  "pdf": "00-LIESMICH-DE.pdf",
+  "txt": "00-LIESMICH-DE.txt",
+  "readme": "README.md",
+  "starter": "Infrastruktur/ANLEITUNG.md",
+  "sources": "Infrastruktur/QUELLEN.md",
+  "license": "Infrastruktur/LIZENZ.txt",
+  "guides": "Anleitungen",
+  "personal": "Eigene-Dateien",
+  "private": "Vertrauliche-Dateien",
+  "illustrations": "Infrastruktur/Bilder",
+  "tools": "Infrastruktur/Werkzeuge",
+  "catalog_script": "KATALOG-AKTUALISIEREN.py",
+  "manifest": "Infrastruktur/PRUEFSUMMEN.sha256",
+  "source_code": "Infrastruktur/Quellcode",
+  "connector_source": "assets/stecker.svg",
+  "connector_name": "USB-Stecker.svg",
+  "folder_readme": "HINWEIS.txt",
+  "folders": {"Fotos": "Fotos", "Karten": "Karten", "Dokumente": "Dokumente", "Mein-Ort": "Mein-Ort"},
+  "extra_files": [{"source": "templates/MEIN-ORT-VORLAGE.txt", "dest": "Eigene-Dateien/Mein-Ort/VORLAGE.txt"}, {"source": "DESIGN.md", "dest": "Infrastruktur/DESIGN.md"}],
+  "empty_message": "Noch keine eigenen Dateien verlinkt. Sie können die Ordner direkt öffnen."
+}

@@ -1,0 +1,1 @@
+Hier können Sie Hinweise zu Ihrem Ort ergänzen. Kopieren Sie die Vorlage aus dem Ordner templates auf Ihren persönlichen Stick und tragen Sie dort nur überprüfte örtliche Informationen ein. Veröffentlichen Sie keine ausgefüllten privaten Angaben im Repository.

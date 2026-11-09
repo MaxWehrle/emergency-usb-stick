@@ -1,0 +1,83 @@
+Ihr Notfall-Stick
+Eine kurze Anleitung für Windows und Android · Stand 09.11.2026
+
+Dieses Paket enthält kurze Hinweise für Notlagen. Sie können es ohne Internet öffnen. Für aktuelle Warnungen gelten die Anweisungen der örtlichen Behörden.
+
+In fünf Schritten zum fertigen Stick
+
+1. Paket entpacken
+Laden Sie die deutsche ZIP-Datei herunter. Öffnen Sie sie in Downloads und wählen Sie Entpacken bzw. Alle extrahieren.
+
+2. Alles auf den Stick kopieren
+Kopieren Sie den gesamten Inhalt des entpackten Ordners. START.html und diese PDF sollen direkt auf dem USB-Stick liegen.
+
+3. Startseite öffnen
+Öffnen Sie START.html auf dem Stick. Unter Android geht das über die Dateien-App. Falls es nicht klappt, öffnen Sie Anleitungen und lesen Sie eine .txt-Datei.
+
+4. Eigene Dateien ergänzen
+In Eigene-Dateien finden Sie Platz für Fotos, Karten, Dokumente und Angaben zu Ihrem Ort. Sensible Unterlagen gehören nur in einen zuvor getesteten verschlüsselten Tresor.
+
+5. Offline testen und zweite Kopie anlegen
+Schalten Sie für den Test das Internet aus. Öffnen Sie einen Hinweis und kopieren Sie eine eigene Testdatei zurück auf Ihr Gerät. Legen Sie eine zweite vollständige Kopie an einem anderen Ort ab.
+
+Wichtig: Eine ZIP-Datei allein auf dem Stick reicht nicht. Kopieren Sie die Dateien aus dem entpackten Ordner. Wenn Sie bei einem Schritt unsicher sind, gehen Sie diese Anleitung in Ruhe noch einmal durch oder testen Sie ihn mit einer vertrauten Person.
+
+Was liegt wo?
+Die Namen auf dem Stick beschreiben ihren Zweck. Sie können jeden Ordner direkt in der Dateien-App oder im Datei-Explorer öffnen.
+
+START.html
+Startseite mit Suche und kurzen Lagekarten.
+
+Anleitungen
+Dieselben Hinweise als normale .txt-Dateien. Diese funktionieren auch, wenn die Startseite auf Ihrem Handy nicht öffnet.
+
+Eigene-Dateien
+Ihre Ordner für Fotos, Karten, Dokumente und Mein-Ort. Sie sind zu Beginn leer; HINWEIS.txt erklärt jeden Ordner.
+
+Vertrauliche-Dateien
+Anleitung zum Verschlüsseln sensibler Unterlagen. Ein Tresor und Passwörter sind nicht enthalten.
+
+Infrastruktur
+Quellen, Lizenz, ausführliche Projektunterlagen und Code. Für die normale Nutzung müssen Sie diesen Ordner nicht öffnen.
+
+Wenn etwas nicht öffnet
+Öffnen Sie den USB-Stick im Datei-Explorer oder in der Dateien-App. Wählen Sie im Ordner Anleitungen die passende .txt-Datei. Testen Sie das Öffnen auf Ihren eigenen Geräten, bevor Sie den Stick brauchen.
+
+Persönliche Fotos und Dokumente gehören nicht in das öffentliche GitHub-Repository. Vertrauliche Unterlagen nur nach einem erfolgreichen Verschlüsselungs- und Wiederherstellungstest ergänzen.
+
+Digitale Kopien ersetzen keine Originaldokumente. Aktuelle Warnungen und Anweisungen vor Ort haben Vorrang vor diesem Offline-Paket.
+
+So kopieren Sie das Paket
+Die folgenden Schritte sind für zwei Wege gedacht. Wählen Sie nur den Abschnitt für Ihr Gerät.
+
+Mit einem Windows-PC
+1. Öffnen Sie Downloads im Datei-Explorer. Klicken Sie mit der rechten Maustaste auf die heruntergeladene ZIP-Datei und wählen Sie Alle extrahieren.
+2. Öffnen Sie den entpackten Ordner. Darin müssen START.html, 00-LIESMICH-DE.pdf und die Ordner Anleitungen und Eigene-Dateien zu sehen sein.
+3. Stecken Sie den USB-Stick ein und öffnen Sie ihn im Datei-Explorer unter Dieser PC. Wenn bereits Dateien darauf liegen, prüfen Sie diese vor dem Kopieren.
+4. Markieren Sie alles im entpackten Ordner mit Strg + A und kopieren Sie es mit Strg + C. Wechseln Sie zum Stick und fügen Sie es mit Strg + V ein.
+5. Warten Sie, bis das Kopieren fertig ist. Öffnen Sie START.html direkt vom Stick und prüfen Sie einen Hinweis im Ordner Anleitungen.
+
+Nur mit einem Android-Handy
+1. Öffnen Sie Downloads in Ihrer Dateien-App. Tippen Sie auf die ZIP-Datei und wählen Sie Entpacken oder Extrahieren.
+2. Verbinden Sie einen passenden USB-Stick oder Adapter. Öffnen Sie USB-Speicher in der Dateien-App.
+3. Markieren Sie alle Dateien und Ordner im entpackten Ordner. Wählen Sie Kopieren und dann den USB-Speicher als Ziel.
+4. Öffnen Sie START.html auf dem Stick. Falls Ihr Handy lokale HTML-Dateien nicht öffnet, lesen Sie die .txt-Dateien im Ordner Anleitungen.
+
+Eigene Dateien und Pflege
+Der Stick ist erst dann hilfreich, wenn Sie die für Ihren Haushalt wichtigen Dateien ergänzt und die Wiederherstellung ausprobiert haben.
+
+Was Sie ergänzen können
+Fotos: eigene Bilder. Karten: rechtmäßig gespeicherte Offline-Karten. Dokumente: eigene, nicht vertrauliche Dateien. Mein-Ort: eine persönliche Kopie der leeren Vorlage mit überprüften örtlichen Angaben.
+Eine Kontaktliste, Ladegerät, passender Adapter und eine Taschenlampe können ebenfalls nützlich sein. Digitale Dokumentkopien ersetzen keine Originale.
+
+Vertrauliche Dateien
+Ausweise, Gesundheitsdaten und andere sensible Angaben gehören nur in einen verschlüsselten Tresor, den Sie vorher unter Windows und Android tatsächlich geöffnet und getestet haben. Die Anleitung liegt in Vertrauliche-Dateien/HINWEIS.txt.
+Bewahren Sie Passwort und Wiederherstellungsschlüssel getrennt vom Stick auf. Im öffentlichen Paket sind keine persönlichen Daten, Passwörter oder Schlüssel.
+
+Wie viel Speicher?
+Prüfen Sie die Größe Ihrer eigenen Dateien und rechnen Sie etwa ein Drittel Reserve hinzu. Für 5 GB eigene Dateien sind 16-32 GB eine einfache Orientierung; für 35 GB etwa 64 GB, für 140 GB etwa 256 GB. Die nutzbare Kapazität kann geringer sein.
+Prüfen Sie vor dem Kauf, ob Anschluss und Adapter zu Ihren Geräten passen. Ein passender Stecker allein garantiert nicht, dass Ihr Handy den Stick lesen kann.
+
+Zwei Kopien und Wiederherstellung
+Legen Sie eine zweite vollständige Kopie an einem anderen Ort ab. Prüfen Sie beide nach Änderungen und regelmäßig, zum Beispiel alle drei Monate.
+Kopieren Sie eine harmlose Testdatei vom Stick zurück auf Ihr Gerät und öffnen Sie die zurückkopierte Datei. Erst dann wissen Sie, dass dieser Weg auf Ihrem Gerät funktioniert.
