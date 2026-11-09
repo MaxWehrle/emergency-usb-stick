@@ -1,5 +1,7 @@
 # Emergency USB Stick · Notfall-Stick
 
+![Emergency USB Stick: offline guides for Germany and the United States](assets/repo-social-preview.png)
+
 Offline-Hinweise für den USB-Stick, ergänzt durch Platz für eigene Dateien. Die Pakete funktionieren ohne Installation und ohne Internet. Jede Länderfassung hat geprüfte regionale Inhalte; Sprache und Land sind getrennt ausgewiesen.
 
 Offline emergency guides for a USB drive, with space for your own files. Each country package includes reviewed regional information and identifies its language separately.
