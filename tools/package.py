@@ -13,7 +13,7 @@ root = Path(__file__).resolve().parents[1]
 user_root = root.parent if root.name in {"Infrastruktur", "Infrastructure"} else root
 cfg = json.loads((root / "content/package.json").read_text(encoding="utf-8"))
 
-required = ("release", "pdf", "txt", "readme", "starter", "sources", "license",
+required = ("release", "pdf", "txt", "starter", "sources", "license",
             "guides", "personal", "private", "illustrations", "tools",
             "catalog_script", "manifest", "connector_source", "connector_name",
             "folders", "folder_readme", "empty_message")
@@ -42,7 +42,7 @@ def add(src, dst, *, text=True):
     if src != dst:
         replacements[src] = dst
 
-for src, key in (("README.md", "readme"), ("STARTERGUIDE.md", "starter"),
+for src, key in (("STARTERGUIDE.md", "starter"),
                  ("SOURCES.md", "sources"), ("LICENSE", "license")):
     add(src, cfg[key])
 add("START.html", "START.html")

@@ -43,7 +43,7 @@ Die Anleitungen gibt es zusätzlich als `00-LIESMICH-DE.txt` und `00-READ-ME-US.
 
 Länderbranches heißen `country/<ISO-3166-1-alpha-2>`, Sprachvarianten nutzen BCP-47-Tags. Releases heißen `<COUNTRY>-YYYY.MM.DD-rN`. Gemeinsame technische Änderungen werden auf `main` geprüft und anschließend gezielt in jeden Länderbranch übernommen. Regionaler Text, Pfade und Quellen werden dabei einzeln überprüft; die Pakete werden erneut gebaut und geprüft.
 
-SHA-256: `DE-2026.11.09-r5.zip` = `dd256490245040c647efbcad2a47aa0d349e577d5b68b9cb54060872e44e7a86`; `US-2026.11.09-r2.zip` = `736d257c62e91f1be1cd2463280462eb8f2ace229280d764727a2e58e8bff1ad`. Ältere Fassungen bleiben unter [releases](releases/) verfügbar.
+SHA-256: `DE-2026.11.09-r5.zip` = `8323301809a6edd54bafba1cf0ea2c2fed0b48a671fc1d7a2f59a2ae8f112438`; `US-2026.11.09-r2.zip` = `e81d94e9d5b18170ff10658192bb7b9fd5e17a0ef62256e7f4f1347d192759e9`. Ältere Fassungen bleiben unter [releases](releases/) verfügbar.
 
 Geplante GitHub Actions laufen vom Default-Branch; die dortige Workflow-Datei enthält die nötigen Auslöser. Technische Prüfungen ersetzen keine menschliche Quellenprüfung von medizinischen, sicherheitsrelevanten oder regionalrechtlichen Angaben.
 
