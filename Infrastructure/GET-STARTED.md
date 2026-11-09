@@ -40,7 +40,7 @@ Open `My-Files/` on the drive. Put your photos in `Photos/`, lawful offline maps
 
 You may add contacts, a medication list, document copies, family photos, maps, chargers, a compatible adapter and flashlight. Keep sensitive information only in a **tested encrypted vault**; read `Private-Files/README.txt` first. No personal files or passwords come with the package.
 
-Your files stay accessible in their folders. Optional: `python Infrastructure/Tools/UPDATE-CATALOG.py` adds their names to `START.html`. Python is **not** needed for ordinary use.
+Your files stay accessible in their folders. Optional: `python Infrastructure/Optional-Tools/UPDATE-CATALOG.py` adds their names to `START.html`. Python is **not** needed for ordinary use.
 
 ## 4. Test and make a second copy
 

@@ -52,7 +52,7 @@ with TemporaryDirectory() as tmp:
         assert sha256((target / rel).read_bytes()).hexdigest() == digest, rel
     sample = target / 'My-Files/Photos/TESTPHOTO.txt'
     sample.write_text('harmless test', encoding='utf-8')
-    subprocess.run(['python', 'Infrastructure/Tools/UPDATE-CATALOG.py'], cwd=target, check=True, capture_output=True)
+    subprocess.run(['python', 'Infrastructure/Optional-Tools/UPDATE-CATALOG.py'], cwd=target, check=True, capture_output=True)
     assert 'TESTPHOTO.txt' in start.read_text(encoding='utf-8')
     assert sample.read_text(encoding='utf-8') == 'harmless test'
 print('ZIP extraction, offline links/assets, guides, and media indexing passed.')

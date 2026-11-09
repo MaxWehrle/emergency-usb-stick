@@ -10,7 +10,7 @@
   "personal": "My-Files",
   "private": "Private-Files",
   "illustrations": "Infrastructure/Illustrations",
-  "tools": "Infrastructure/Tools",
+  "tools": "Infrastructure/Optional-Tools",
   "catalog_script": "UPDATE-CATALOG.py",
   "manifest": "Infrastructure/CHECKSUMS.sha256",
   "source_code": "Infrastructure/Source-Code",
