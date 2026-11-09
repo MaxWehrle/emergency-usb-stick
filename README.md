@@ -1,37 +1,46 @@
-# Notfall-USB-Stick · offene Vorlage
+# Emergency USB Stick · Notfall-Stick
 
-Ein einfacher Notfall-Ordner für einen USB-Stick. Die Startseite funktioniert ohne Internet und ohne Installation. Alle Themen liegen zusätzlich als normale Textdateien bereit.
+Offline-Hinweise für den USB-Stick, ergänzt durch Platz für eigene Dateien. Die Pakete funktionieren ohne Installation und ohne Internet. Jede Länderfassung hat geprüfte regionale Inhalte; Sprache und Land sind getrennt ausgewiesen.
 
-## Deutschland: in fünf Schritten
+Offline emergency guides for a USB drive, with space for your own files. Each country package includes reviewed regional information and identifies its language separately.
 
-1. [Deutsches Paket herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r3.zip). Es ist eine **ZIP-Datei**: eine gepackte Sammlung von Dateien.
-2. Öffnen Sie auf Windows **Downloads**. Klicken Sie mit der rechten Maustaste auf die ZIP-Datei und wählen Sie **Alle extrahieren**. So holen Sie die Dateien in einen normalen Ordner.
-3. Stecken Sie einen USB-Stick ein. Kopieren Sie **alles aus dem entpackten Ordner** auf den Stick. Danach muss die Datei `START.html` direkt auf dem Stick zu sehen sein.
-4. Klicken Sie zweimal schnell auf `START.html`. Auf Android öffnen Sie den Stick in der App **Dateien** und tippen auf `START.html`. Wenn das nicht klappt, lesen Sie die Dateien im Ordner `guides`.
-5. Ergänzen Sie eigene Dateien im Ordner `personal`. Testen Sie den Stick ohne Internet und kopieren Sie eine Datei probeweise zurück. Legen Sie eine zweite Kopie an einem anderen Ort ab.
+## Pakete / Packages
 
-[Anleitung mit ganz kleinen Schritten](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/STARTERGUIDE.md) · [Deutschland (`de-DE`) ansehen](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE) · [Quellen](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/SOURCES.md) · [Wartungs-Prompts](https://github.com/MaxWehrle/emergency-usb-stick/blob/maintenance/maintenance/PROMPTS.md)
+| Land / Country | Sprache / Language | Stand / Release | Download | Quellen / Sources |
+|---|---|---|---|---|
+| Deutschland | de-DE | 09.11.2026 · Revision 4 | [Deutsches Paket herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r4.zip) | [Deutschland](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/SOURCES.md) |
+| United States | en-US | Nov 9, 2026 · revision 1 | [Download U.S. package](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/US-2026.11.09-r1.zip) | [United States](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/US/SOURCES.md) |
 
-> Ein digitaler Notfallordner ersetzt weder aktuelle behördliche Warnungen noch Originaldokumente. Bei akuter Gefahr gelten die Anweisungen der örtlichen Einsatzkräfte.
+### Deutsch: Stick vorbereiten
 
-## Verfügbare Fassungen
+1. [Deutsches Paket herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r4.zip) und die ZIP-Datei entpacken.
+2. Den **Inhalt des entpackten Ordners** auf einen USB-Stick kopieren. `START.html` soll direkt auf dem Stick liegen.
+3. `START.html` vom Stick öffnen. Auf Android geht das über die Dateien-App; falls lokale HTML-Dateien nicht geöffnet werden, stehen alle Hinweise auch im Ordner `guides`.
+4. Eigene Dateien in `personal` ergänzen. Den Stick offline testen und eine Testdatei zurück auf das Gerät kopieren. Eine zweite vollständige Kopie getrennt aufbewahren.
 
-| Land | Sprache | Stand | Download |
-|---|---|---|---|
-| Deutschland | de-DE | 09.11.2026, einfache Anleitung, Revision 3 | [Paket-ZIP direkt herunterladen](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/DE-2026.11.09-r3.zip) · [Datei im Repository](releases/DE-2026.11.09-r3.zip) |
+[Ausführlicher Starterguide für Windows und Android](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/DE/STARTERGUIDE.md) · [Deutsche Fassung ansehen](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/DE)
 
-Weitere Länder erscheinen erst nach Übersetzung **und** eigener regionaler Quellenprüfung. Sprache und Land sind getrennte Angaben.
+### English: prepare your drive
 
-## Aufbau und Releases
+1. [Download the U.S. package](https://raw.githubusercontent.com/MaxWehrle/emergency-usb-stick/main/releases/US-2026.11.09-r1.zip) and extract the ZIP.
+2. Copy **everything inside the extracted folder** to a USB drive. `START.html` should be directly on the drive.
+3. Open `START.html` from the drive. On Android, use your Files app; if local HTML does not open, read the ordinary files in `guides`.
+4. Add your own files in `personal`. Test offline and copy a test file back to your device. Keep a second complete copy elsewhere.
 
-- `main`: gemeinsame Technik, Projektstart, Beiträge und Lizenz.
-- `country/DE`: vollständiges deutsches USB-Paket. Weitere Länder: `country/FR`, `country/GB` usw. Sprachvarianten tragen BCP-47-Tags wie `de-DE`.
-- `maintenance`: Prüfabläufe, Vorlagen und Prompts ohne private Daten.
+[Detailed Windows and Android guide](https://github.com/MaxWehrle/emergency-usb-stick/blob/country/US/STARTERGUIDE.md) · [View U.S. edition](https://github.com/MaxWehrle/emergency-usb-stick/tree/country/US)
 
-Gemeinsame technische Änderungen werden auf `main` geprüft und per selektivem `git cherry-pick` oder gezieltem Dateiabgleich in Länder-Branches übernommen. Dateien unter `content/`, `guides/`, `SOURCES.md` und `STARTERGUIDE.md` sind regional und werden dabei nicht automatisch überschrieben. Nach dem Abgleich `python tools/build.py` und `python tools/verify.py` ausführen und die erzeugte Oberfläche prüfen. Länder-Releases heißen `DE-YYYY.MM.DD-rN`; das Release-ZIP enthält den **Inhalt** des Länder-Branches und wird vor Veröffentlichung gegen dessen Commit-Prüfsummen geprüft. Das Paket `DE-2026.11.09-r3.zip` hat SHA-256 `3167bfe75dd144f91622f54616f4215a390b32c1d6aa8db4a4f5fd159df8a738`.
+**Bei akuter Gefahr gelten aktuelle örtliche Warnungen und Anweisungen. Digitale Kopien ersetzen keine Originaldokumente.** Current local alerts and orders take priority. Digital copies do not replace original documents.
 
-GitHub Actions mit `schedule` laufen nur vom Default-Branch. Deshalb liegt der technische Prüfauslöser auf `main`; fachliche und regionale Prüfabläufe stehen in `maintenance` und werden nicht durch einen automatischen grünen Haken ersetzt. `workflow_dispatch` wird ebenfalls auf `main` gehalten, damit es leicht auffindbar ist.
+## Branches and releases
 
-## Lizenz
+- `main`: shared code, project entry, contribution rules, license, and published ZIPs.
+- `country/DE`: Germany, `de-DE`; `country/US`: United States, `en-US`. Country branches include the complete offline package and regional sources. Add a country only after translation **and** regional review.
+- `maintenance`: audit procedures, check templates, reusable agent prompts, and technical checks. [Maintenance prompts](https://github.com/MaxWehrle/emergency-usb-stick/blob/maintenance/maintenance/PROMPTS.md).
 
-Eigene Software und Texte: MIT, siehe [LICENSE](LICENSE). Verlinkte Inhalte Dritter bleiben bei deren Rechteinhabern und sind nicht Teil dieser Lizenz. Es werden keine fremden PDFs oder privaten Medien mitgeliefert.
+Use `country/<ISO-3166-1-alpha-2>` for country branches and BCP-47 tags for language variants. Releases use `<COUNTRY>-YYYY.MM.DD-rN`. For technical changes, review on `main`, then selectively cherry-pick or compare files into each country branch. Never automatically overwrite `content/`, `guides/`, `SOURCES.md`, `STARTERGUIDE.md`, or country folder names. Build and verify each country again after synchronization.
+
+Release SHA-256 checksums: `DE-2026.11.09-r4.zip` = `c7f4206b86f26a6a419aedf37cf1b5d8d04aa08b4f812d5b2bb0bf9b6dcb6964`; `US-2026.11.09-r1.zip` = `6a8aab3bffa7e0b7450a1add7d6a6b6bd5adfd12ba408f9dcd73375d94e7a508`. Older releases remain in [releases](releases/).
+
+GitHub Actions `schedule` runs from the default branch, and manual `workflow_dispatch` is kept there for visibility. Automated checks do not replace human review of safety, medical, legal, and regional claims.
+
+Project code and original text: [MIT license](LICENSE). Linked third-party material remains with its rights holders and is not bundled. Report corrections through [GitHub issues](https://github.com/MaxWehrle/emergency-usb-stick/issues) without posting personal data. See [contribution rules](CONTRIBUTING.md).
